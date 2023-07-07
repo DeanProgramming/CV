@@ -6,6 +6,7 @@ toggleButtons.forEach(function(button, index) {
 
     // Hide the hidden text initially
     hiddenTexts[index].style.display = 'none'; 
+    button.textContent = 'Show More';
 });
 
   
