@@ -23,7 +23,8 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Projects</a></li> 
+								<li class="current"><a href="index.html">Professional Projects</a></li> 
+								<li><a href="#personal-projects">Personal Projects</a></li>
 								<li><a href="Dean_Holland_CV.pdf"target="_blank" rel="noopener noreferrer" >CV</a></li> 
 								<li><a href="achievements.html"> Achievements</a></li> 
 							</ul>
@@ -38,10 +39,55 @@
 								<!-- 1 Selection -->
 									<section>  
 										<header class="major">
-											<h1>  Projects </h1> 
+											<h1> Professional Projects </h1> 
 										</header>
 
 										<div class="row">
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<a href="https://highlight-games.com/" target="_blank" rel="noopener noreferrer" class="image featured">
+														<img src="images/HighlightGames.png" alt="" />
+													</a>
+													<br>
+													<header>
+														<h2>Software Engineer (.NET, Razor Pages, CSS)</h2>
+														<h2>Highlight Games</h2>
+													</header>
+
+													<div class="hidden-text">
+														<p>As a Software Engineer at Highlight Games, I focus primarily on frontend development for a virtual sports betting platform. I build dynamic, data-driven user interfaces that closely align with client expectations, combining strong attention to detail with scalable and maintainable implementation.</p>
+
+														<p>Key Contributions and Responsibilities:</p>
+
+														<p>Frontend Development & Dynamic Components: I design and implement reusable, dynamic UI components using .NET and Razor Pages, translating complex client designs into functional, production-ready interfaces.</p>
+
+														<p>Data Integration & Display: I retrieve and work with JSON responses, extracting relevant fields and transforming them into clear, user-friendly displays. This ensures real-time and accurate presentation of betting-related content within the platform.</p>
+
+														<p>Detail-Oriented UI Implementation: A core part of my role involves recreating client-proposed displays with a keen eye for detail. Many of these layouts are complex, requiring careful consideration of structure, responsiveness, and usability to achieve the best possible visual and functional result.</p>
+
+														<p>Advanced CSS & Theming: I work extensively with CSS and CSS variables to support a flexible theming engine. This approach keeps styling consistent while allowing efficient customization and long-term maintainability across multiple client configurations.</p>
+
+														<p>Collaborative Development Workflow: I contribute through a pull-request-driven workflow using Bitbucket, participating in code reviews and maintaining quality standards. I work closely with Product Managers to clarify requirements, iterate on UI behaviour, and deliver features in line with product goals.</p>
+
+														<p>Technology Stack & Practices: My day-to-day work involves .NET, Razor Pages, and CSS, with strong use of version control and structured development practices to support reliable, scalable delivery.</p>
+
+														<p>Overall Experience: My role at Highlight Games has strengthened my frontend engineering skillset, improved my ability to build complex interfaces from designs and data, and reinforced the importance of clear communication and collaboration in a fast-paced product environment.</p>
+													</div>
+
+													<button class="toggle-button">Expand Description</button>
+
+													<footer>
+														<ul class="actions">
+															<li>
+																<a href="https://highlight-games.com/" target="_blank" rel="noopener noreferrer" class="button alt">
+																	Go to Website
+																</a>
+															</li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<a href="https://www.distinctivegames.com/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/DistinctiveGames.png" alt="" /></a>
@@ -75,14 +121,115 @@
 														</ul>
 													</footer>
 												</section>
-											</div>												
-											
+											</div>		
+											 
+												<div class="col-12" id="personal-projects">
+													<header class="major">
+														<h1>Personal Projects</h1>
+													</header>
+												</div>
+
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<a href="https://expensetracker-deanh.azurewebsites.net/Expenses" target="_blank" rel="noopener noreferrer" class="image featured"> 
+														<img src="images/ExpenseTracker.gif" alt="Expense Tracker preview" />
+													</a>
+
+													<header>
+														<h2>Expense Tracker</h2>
+														<h2>.NET 9, ASP.NET MVC (Razor), SQL Server, EF Core, ASP.NET Identity, JavaScript, Chart.js and deployed on Azure</h2>
+													</header>
+
+													<div class="hidden-text">
+														<p>
+															Expense Tracker is a full-stack web application built with .NET 9.0 and ASP.NET MVC, designed to help users
+															record and manage their spending with ease. Users can create, edit, and delete expense entries, while the
+															dashboard provides a clear monthly breakdown using Chart.js pie charts—including a smooth, live-updating view
+															of each month’s category spend and an average monthly category chart.
+														</p>
+
+														<p>
+															The project uses SQL Server for persistence, includes a secure login system (ASP.NET Identity), and is fully
+															deployed on Azure.
+														</p>
+
+														<p>Key features of Expense Tracker include:</p>
+
+														<p>
+															Secure Authentication &amp; User Accounts: Users can sign in and manage expenses tied to their account using
+															ASP.NET Identity.
+														</p>
+
+														<p>
+															Full Expense Management (CRUD): Add new expenses, edit existing expenses, and remove expenses with validation
+															and a clean MVC workflow.
+														</p>
+
+														<p>
+															Monthly Chart Dashboard (Chart.js): Monthly pie charts show expense totals per category, alongside an average
+															monthly pie chart that summarizes average spend per category across available months.
+														</p>
+
+														<p>
+															Smooth Live Updates: Charts and the monthly view update dynamically as expenses are added/edited/deleted—no
+															full-page refresh required—keeping the experience fast and responsive.
+														</p>
+
+														<p>
+															Interactive Monthly Editing Panel: Select a month to instantly view and edit transactions for that period,
+															create new entries directly from the month view, and follow a short confirm step on delete to prevent
+															accidental removals.
+														</p>
+
+														<p>
+															Demo / Seed Data Regeneration (Optional): Seed logic can regenerate demo data when stale, including a cooldown
+															mechanism to prevent repeated manual regeneration requests.
+														</p>
+
+														<p>System Architecture:</p>
+
+														<p>
+															Presentation Layer: ASP.NET MVC Views (Razor), client-side JavaScript for smooth UX and chart updates, and
+															Chart.js for interactive visualization.
+														</p>
+
+														<p>
+															Application Layer: Controllers handle routing, validation, and orchestration, while services encapsulate
+															business workflows (including seeding / regeneration).
+														</p>
+
+														<p>
+															Data Layer: Entity Framework Core (EF Core) for data access, SQL Server for persistence, and Identity tables
+															for authentication and user management.
+														</p>
+													</div>
+
+													<button class="toggle-button">Expand Description</button>
+
+													<footer>
+														<ul class="actions"> 
+															<li>
+																<a href="https://github.com/DeanProgramming/ExpenseTracker" target="_blank" rel="noopener noreferrer" class="button alt">
+																	Download Source code
+																</a>
+															</li>
+															<li>
+																<a href="https://expensetracker-deanh.azurewebsites.net/Expenses" target="_blank" rel="noopener noreferrer" class="button alt">
+																	Live on Azure
+																</a>
+															</li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+
+											<!--
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<a href="Dean H - Online Learning Platform Design Document.pdf" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/TempImageForOnlineLearning.png" alt="" /></a>
 													<header>
 														<h2>Online Learning Platform - InProgress</h2>
-														<h2>ASP.NET, Vue.JS, Microsoft SQL Server Management Studio, T-SQL, Entity FrameWork Core, xUnit, Jest and deployed on Azure</h2>
+														<h2>ASP.NET Core, Vue.JS, Microsoft SQL Server Management Studio, T-SQL, Entity FrameWork Core, xUnit, Jest and deployed on Azure</h2>
 													</header>
 													
 													<div class="hidden-text">
@@ -105,7 +252,7 @@
 													</footer>
 												</section>
 											</div>
-											
+											-->
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<a href="Dean H - Employee Performance Management System Design Document.pdf" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/EmployeeManagementSystemGif.gif" alt="" /></a>
