@@ -60,6 +60,116 @@ body {
   max-height: 3000px;
   opacity: 1;
 }
+/* === Top Scroll Progress Bar === */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: rgba(0,0,0,0.65);
+  z-index: 10000;
+}
+ 
+body.is-scrolled #header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+ 
+body.is-scrolled #header {
+  background: rgba(255,255,255,0.92); /* safe default */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+ 
+body.is-scrolled #header h1 {
+  font-size: 1.1em;
+  margin: 0.6em 0 0.2em 0;
+}
+ 
+body.is-scrolled #nav ul {
+  margin: 0.35em 0 0.7em 0;
+}
+ 
+body.is-scrolled #nav li:not(.current):not(.keep-on-scroll):not(.nav-top) {
+  display: none;
+}
+
+/* Make active link obvious */
+#nav li.active > a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+ /* === Compact Nav (separate bar, no layout shift) === */
+#compact-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+  transform: translateY(-110%);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+body.show-compact-nav #compact-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#compact-nav .compact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#compact-nav .brand {
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+#compact-nav .compact-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+#compact-nav .compact-links a {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+#compact-nav .compact-links a.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  opacity: 1;
+}
+
+/* If you have the progress bar, keep it above the compact nav */
+#scroll-progress {
+  z-index: 10000;
+}
+
+#main, #personal-projects {
+  scroll-margin-top: 90px;
+}
 
 /* Better spacing on small screens */
 @media (max-width: 736px) {
