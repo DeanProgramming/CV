@@ -581,7 +581,7 @@
 														<h2>Unity C# Developed</h2>
 													</header>
 													<div class="project-overview"> 
-													<p>Indie roguelike vertical slice where you led enemy AI development, building modular behaviours and squad-style coordination. Focused on dynamic enemy selection for procedural gameplay while keeping encounters fair and readable.</p>
+													<p>Prototype vertical slice developed enemy AI behaviour, building modular behaviours and squad-style coordination. Focused on dynamic enemy selection for procedural gameplay while keeping encounters fair and readable.</p>
 													</div>
 
 													<div class="hidden-text">
@@ -722,24 +722,41 @@
 
 
 			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-								<section> 
-									<ul class="contact"> 
-										<li>
-											<h4>Email</h4>
-											<p><a href="#">Holland.d@hotmail.co.uk</a></p>
-										</li> 
-									</ul>
-								</section>
-							</div>	 
-						</div>
-					</div>
-				</section>
 
 		</div>
+
+		<div id="compact-footer" aria-label="Footer shortcuts">
+  <div class="compact-inner">
+    <span class="footer-left">© <span id="year"></span> Dean Holland</span>
+
+    <nav class="footer-icons" aria-label="Social links">
+      <!-- Replace # with your real links -->
+      <a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email">
+        <span class="icon solid fa-envelope"></span>
+      </a>
+
+      <a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <span class="icon brands fa-github"></span>
+      </a>
+
+      <a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <span class="icon brands fa-linkedin"></span>
+      </a>
+
+      <a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+        <span class="icon solid fa-file-pdf"></span>
+      </a>
+
+      <a class="icon-link" href="#header" aria-label="Back to top">
+        <span class="icon solid fa-arrow-up"></span>
+      </a>
+    </nav>
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

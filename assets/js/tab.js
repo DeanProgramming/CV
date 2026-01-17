@@ -68,15 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBar.style.width = percent.toFixed(2) + "%";
   }
 
-  function updateCompactVisibility() {
-    const y = window.scrollY;
+function updateCompactVisibility() {
+  const y = window.scrollY;
 
-    if (!document.body.classList.contains("show-compact-nav") && y > ENTER_Y) {
-      document.body.classList.add("show-compact-nav");
-    } else if (document.body.classList.contains("show-compact-nav") && y < EXIT_Y) {
-      document.body.classList.remove("show-compact-nav");
-    }
-  }
+  // nav
+  if (!document.body.classList.contains("show-compact-nav") && y > ENTER_Y) {
+    document.body.classList.add("show-compact-nav");
+  } else if (document.body.classList.contains("show-compact-nav") && y < EXIT_Y) {
+    document.body.classList.remove("show-compact-nav");
+  } 
+}
 
   function updateActiveSection() {
     if (!sectionTops.length) return;

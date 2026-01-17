@@ -170,7 +170,73 @@ body.show-compact-nav #compact-nav {
 #main, #personal-projects {
   scroll-margin-top: 90px;
 }
+#compact-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
+  z-index: 9999;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 -8px 22px rgba(0,0,0,0.10);
+
+  /* keep it thin */
+  padding: 0;
+}
+
+#compact-footer .compact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#compact-footer .footer-left {
+  font-size: 1.0rem;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+#compact-footer .footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  flex-wrap: wrap;
+}
+
+#compact-footer .icon-link {
+  text-decoration: none;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+#compact-footer .icon-link:hover {
+  opacity: 1;
+}
+
+/* Ensure icons align nicely */
+#compact-footer .icon-link .icon {
+  font-size: 1.5rem;
+}
+
+/* Prevent content being hidden behind fixed footer */
+body {
+  padding-bottom: 64px; /* tweak if needed based on your footer height */
+}
+
+/* Optional: On very small screens, hide the copyright text */
+@media (max-width: 480px) {
+  #compact-footer .footer-left {
+    display: none;
+  }
+} 
 /* Better spacing on small screens */
 @media (max-width: 736px) {
   .project-overview {
