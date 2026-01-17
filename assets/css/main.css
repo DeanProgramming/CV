@@ -49,7 +49,17 @@ body {
 .project-overview p {
   margin: 0;
 }
+.hidden-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+}
 
+.hidden-text.active {
+  max-height: 3000px;
+  opacity: 1;
+}
 
 /* Better spacing on small screens */
 @media (max-width: 736px) {
