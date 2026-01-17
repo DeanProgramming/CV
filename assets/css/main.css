@@ -33,6 +33,32 @@ body {
 	line-height: 1;
 }
 
+.project-overview {
+  margin: 0.75rem 0 1rem 0;
+  padding: 0.95rem 1rem;
+  border-radius: 0.75rem;
+
+  /* Soft background + subtle border that works on light themes */
+  background: rgba(0, 0, 0, 0.035);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+ 
+.project-overview p {
+  margin: 0;
+}
+
+
+/* Better spacing on small screens */
+@media (max-width: 736px) {
+  .project-overview {
+    padding: 0.85rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
 ol, ul {
 	list-style: none;
 }
