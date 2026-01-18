@@ -1,771 +1,1049 @@
-<!DOCTYPE HTML>
-<!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Dean Holland Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
-			<div id="scroll-progress"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Dean Holland Portfolio</title>
 
-			<!-- Header -->
-				<section id="header">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic&display=swap"
+    />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-					<!-- Logo -->
-						<h1><a href="index.html">Dean Holland  -  Portfolio</a></h1>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current keep-on-scroll"><a href="index.html">Professional Projects</a></li>
-								<li class="keep-on-scroll"><a href="#personal-projects">Personal Projects</a></li>
-								<li class="keep-on-scroll"><a href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
-								<li class="keep-on-scroll"><a href="achievements.html">Achievements</a></li> 
-							</ul>
-						</nav> 
-				</section>
-				<div id="compact-nav">
-					<div class="compact-inner">
-						<a class="brand" href="#header">Dean Holland</a>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-						<nav class="compact-links">
-						<a href="#main" data-spy="main">Professional</a>
-						<a href="#personal-projects" data-spy="personal-projects">Personal</a>
-						<a href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-						<a href="achievements.html" target="_blank" rel="noopener noreferrer">Achievements</a>
-						</nav>
-					</div>
-					</div>
-									
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row"> 
-							<div class="col-12">
-								<!-- 1 Selection -->
-									<section>  
-										<header class="major">
-											<h1> Professional Projects </h1> 
-										</header>
+  <body class="homepage">
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://highlight-games.com/" target="_blank" rel="noopener noreferrer" class="image featured">
-														<img src="images/HighlightGames.png" alt="" />
-													</a>
-													<br>
-													<header>
-														<h2>Software Engineer (.NET, Razor Pages, CSS)</h2>
-														<h2>Highlight Games</h2>
-													</header> 
-													<div class="project-overview">
-														<p>Frontend-focused engineer on a virtual sports betting platform, building reusable Razor UI components and translating JSON-driven data into clean, client-accurate interfaces. Strong emphasis on pixel-precise layouts, scalable CSS theming, and PR/code-review workflows.</p>
-														</div>
+    <header id="header" class="site-header">
+      <div class="container">
+        <h1 class="site-title">
+          <a href="index.html" aria-label="Go to homepage">Dean Holland — Portfolio</a>
+        </h1>
 
-													<div class="hidden-text">
-														<p>As a Software Engineer at Highlight Games, I focus primarily on frontend development for a virtual sports betting platform. I build dynamic, data-driven user interfaces that closely align with client expectations, combining strong attention to detail with scalable and maintainable implementation.</p>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul>
+            <li class>
+              <a href="#main" data-spy="main">Professional Projects</a>
+            </li>
+            <li>
+              <a href="#personal-projects" data-spy="personal-projects">Personal Projects</a>
+            </li>
+            <li>
+              <a
+                href="Dean_Holland_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CV</a
+              >
+            </li>
+            <li>
+              <a href="achievements.html">Achievements</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-														<p>Key Contributions and Responsibilities:</p>
+    <div id="compact-nav" aria-label="Compact navigation">
+      <div class="container compact-inner">
+        <a class="brand" href="#header">Dean Holland</a>
 
-														<p>Frontend Development & Dynamic Components: I design and implement reusable, dynamic UI components using .NET and Razor Pages, translating complex client designs into functional, production-ready interfaces.</p>
+        <nav class="compact-links" aria-label="Compact navigation links">
+          <a href="#main" data-spy="main">Professional</a>
+          <a href="#personal-projects" data-spy="personal-projects">Personal</a>
+          <a href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="achievements.html" target="_blank" rel="noopener noreferrer">Achievements</a>
+        </nav>
+      </div>
+    </div>
 
-														<p>Data Integration & Display: I retrieve and work with JSON responses, extracting relevant fields and transforming them into clear, user-friendly displays. This ensures real-time and accurate presentation of betting-related content within the platform.</p>
+    <main id="page-wrapper">
+      <!-- MAIN -->
+      <section id="main" class="section">
+        <div class="container">
+          <header class="major">
+            <h2>Professional Projects</h2>
+          </header>
 
-														<p>Detail-Oriented UI Implementation: A core part of my role involves recreating client-proposed displays with a keen eye for detail. Many of these layouts are complex, requiring careful consideration of structure, responsiveness, and usability to achieve the best possible visual and functional result.</p>
+          <div class="grid">
+            <!-- Highlight Games -->
+            <article class="card">
+              <a
+                href="https://highlight-games.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/HighlightGames.png" alt="Highlight Games website preview" />
+              </a>
 
-														<p>Advanced CSS & Theming: I work extensively with CSS and CSS variables to support a flexible theming engine. This approach keeps styling consistent while allowing efficient customization and long-term maintainability across multiple client configurations.</p>
+              <div class="card-body">
+                <h3>Software Engineer (.NET, Razor Pages, CSS)</h3>
+                <p class="muted">Highlight Games</p>
 
-														<p>Collaborative Development Workflow: I contribute through a pull-request-driven workflow using Bitbucket, participating in code reviews and maintaining quality standards. I work closely with Product Managers to clarify requirements, iterate on UI behaviour, and deliver features in line with product goals.</p>
+                <div class="project-overview">
+                  <p>
+                    Frontend-focused engineer on a virtual sports betting platform, building
+                    reusable Razor UI components and translating JSON-driven data into clean,
+                    client-accurate interfaces.
+                  </p>
+                </div>
 
-														<p>Technology Stack & Practices: My day-to-day work involves .NET, Razor Pages, and CSS, with strong use of version control and structured development practices to support reliable, scalable delivery.</p>
+                <div class="collapsible" id="hg-details">
+                  <p>
+                    As a Software Engineer at Highlight Games, I focus primarily on frontend
+                    development for a virtual sports betting platform. I build dynamic,
+                    data-driven user interfaces that closely align with client expectations,
+                    combining strong attention to detail with scalable and maintainable implementation.
+                  </p>
 
-														<p>Overall Experience: My role at Highlight Games has strengthened my frontend engineering skillset, improved my ability to build complex interfaces from designs and data, and reinforced the importance of clear communication and collaboration in a fast-paced product environment.</p>
-													</div>
+                  <p><strong>Key Contributions and Responsibilities:</strong></p>
+                  <ul>
+                    <li>
+                      <strong>Frontend Development & Dynamic Components:</strong> Reusable, dynamic
+                      UI components using .NET and Razor Pages.
+                    </li>
+                    <li>
+                      <strong>Data Integration & Display:</strong> Work with JSON responses and
+                      transform fields into clear UI displays.
+                    </li>
+                    <li>
+                      <strong>Detail-Oriented UI Implementation:</strong> Pixel-accurate, responsive
+                      recreation of client layouts.
+                    </li>
+                    <li>
+                      <strong>Advanced CSS & Theming:</strong> CSS variables powering a flexible theming engine.
+                    </li>
+                    <li>
+                      <strong>Collaborative Workflow:</strong> PR workflow in Bitbucket, code reviews, and PM collaboration.
+                    </li>
+                  </ul>
 
-													<button class="toggle-button">Expand Description</button>
+                  <p>
+                    <strong>Stack:</strong> .NET, Razor Pages, CSS, version control, structured PR workflow.
+                  </p>
+                </div>
 
-													<footer>
-														<ul class="actions">
-															<li>
-																<a href="https://highlight-games.com/" target="_blank" rel="noopener noreferrer" class="button alt">
-																	Go to Website
-																</a>
-															</li>
-														</ul>
-													</footer>
-												</section>
-											</div>
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="hg-details"
+                >
+                  Show more
+                </button>
 
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://www.distinctivegames.com/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/DistinctiveGames.png" alt="" /></a>
-													<br>
-													<header>
-														<h2>Unity C# Developer</h2>
-														<h2>Distinctive Games</h2>
-													</header>
-													<div class="project-overview">
-														<p>Unity/C# developer contributing across multiple game projects in a hybrid team environment. Delivered features through stand-ups and iteration, taking on varied technical challenges while strengthening gameplay programming and team collaboration.</p>
-														</div>
-													<div class="hidden-text">
-														<p>As a Graduate Programmer at Distinctive Developments, I played a key role in advancing projects with a focus on C# and Unity. I actively engaged in a variety of responsibilities, showcasing my adaptability and commitment to excellence.</p>
-													
-														<p>Key Contributions and Responsibilities:</p>
-													
-														<p>Project Involvement: I contributed significantly to various projects, demonstrating proficiency in C# and Unity. This involved hands-on coding, problem-solving, and collaboration within a dynamic development environment.</p>
-													
-														<p>Hybrid Work Adaptability: Thriving in a hybrid work setting, I seamlessly navigated between remote and in-office workdays. This flexibility allowed for effective communication, timely stand-ups, and collaborative efforts with team members, regardless of physical location.</p>
-													
-														<p>Championing Challenges: Actively participating in stand-up meetings, I consistently sought out new challenges within projects. This proactive approach contributed to the team's success and the timely delivery of high-quality solutions.</p>
-													
-														<p>Code of Pride: I take pride in the projects accomplished at Distinctive Developments, each serving as a testament to my dedication and collaborative spirit. These projects not only honed my Unity skills but also highlighted my broader programming capabilities.</p>
-													
-														<p>Skills Demonstrated: My time at the company showcased my proficiency in generic programming skills, problem-solving, and project management, contributing to the successful completion of various initiatives.</p>
-													
-														<p>Overall Experience: My experience at Distinctive Developments provided a rich learning environment, where I honed my technical skills, collaborated with talented professionals, and contributed to the success of the team and projects.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
+                <div class="actions">
+                  <a
+                    href="https://highlight-games.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                </div>
+              </div>
+            </article>
 
-													<footer>
-														<ul class="actions">
-															<li><a href="https://www.distinctivegames.com/" target="_blank" rel="noopener noreferrer" class="button alt">Go to Website</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>		
-											 
-												<div class="col-12" id="personal-projects">
-													<header class="major">
-														<h1>Personal Projects</h1>
-													</header>
-												</div>
+            <!-- Distinctive Games -->
+            <article class="card">
+              <a
+                href="https://www.distinctivegames.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/DistinctiveGames.png" alt="Distinctive Games website preview" />
+              </a>
 
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://expensetracker-deanh.azurewebsites.net/Expenses" target="_blank" rel="noopener noreferrer" class="image featured"> 
-														<img src="images/ExpenseTracker.gif" alt="Expense Tracker preview" />
-													</a>
+              <div class="card-body">
+                <h3>Unity C# Developer</h3>
+                <p class="muted">Distinctive Games</p>
 
-													<header>
-														<h2>Expense Tracker</h2>
-														<h2>.NET 9, ASP.NET MVC (Razor), SQL Server, EF Core, ASP.NET Identity, JavaScript, Chart.js and deployed on Azure</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>Full-stack expense tracking web app with secure accounts, complete CRUD for transactions, and a live-updating chart dashboard. Built with ASP.NET MVC + EF Core + SQL Server, featuring month-by-month insights and deployed to Azure.</p>
-													</div>
+                <div class="project-overview">
+                  <p>
+                    Unity/C# developer contributing across multiple game projects in a hybrid team
+                    environment. Delivered features through stand-ups and iteration.
+                  </p>
+                </div>
 
-													<div class="hidden-text">
-														<p>
-															Expense Tracker is a full-stack web application built with .NET 9.0 and ASP.NET MVC, designed to help users
-															record and manage their spending with ease. Users can create, edit, and delete expense entries, while the
-															dashboard provides a clear monthly breakdown using Chart.js pie charts—including a smooth, live-updating view
-															of each month’s category spend and an average monthly category chart.
-														</p>
+                <div class="collapsible" id="dg-details">
+                  <p>
+                    As a Graduate Programmer, I contributed to multiple projects using C# and Unity,
+                    collaborating in a hybrid environment and regularly delivering features through stand-ups.
+                  </p>
 
-														<p>
-															The project uses SQL Server for persistence, includes a secure login system (ASP.NET Identity), and is fully
-															deployed on Azure.
-														</p>
+                  <p><strong>Highlights:</strong></p>
+                  <ul>
+                    <li>Hands-on coding and problem-solving across varied projects</li>
+                    <li>Comfortable switching between remote and in-office collaboration</li>
+                    <li>Proactive about taking on new challenges and iterating quickly</li>
+                  </ul>
+                </div>
 
-														<p>Key features of Expense Tracker include:</p>
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="dg-details"
+                >
+                  Show more
+                </button>
 
-														<p>
-															Secure Authentication &amp; User Accounts: Users can sign in and manage expenses tied to their account using
-															ASP.NET Identity.
-														</p>
-
-														<p>
-															Full Expense Management (CRUD): Add new expenses, edit existing expenses, and remove expenses with validation
-															and a clean MVC workflow.
-														</p>
-
-														<p>
-															Monthly Chart Dashboard (Chart.js): Monthly pie charts show expense totals per category, alongside an average
-															monthly pie chart that summarizes average spend per category across available months.
-														</p>
-
-														<p>
-															Smooth Live Updates: Charts and the monthly view update dynamically as expenses are added/edited/deleted—no
-															full-page refresh required—keeping the experience fast and responsive.
-														</p>
-
-														<p>
-															Interactive Monthly Editing Panel: Select a month to instantly view and edit transactions for that period,
-															create new entries directly from the month view, and follow a short confirm step on delete to prevent
-															accidental removals.
-														</p>
-
-														<p>
-															Demo / Seed Data Regeneration (Optional): Seed logic can regenerate demo data when stale, including a cooldown
-															mechanism to prevent repeated manual regeneration requests.
-														</p>
-
-														<p>System Architecture:</p>
-
-														<p>
-															Presentation Layer: ASP.NET MVC Views (Razor), client-side JavaScript for smooth UX and chart updates, and
-															Chart.js for interactive visualization.
-														</p>
-
-														<p>
-															Application Layer: Controllers handle routing, validation, and orchestration, while services encapsulate
-															business workflows (including seeding / regeneration).
-														</p>
-
-														<p>
-															Data Layer: Entity Framework Core (EF Core) for data access, SQL Server for persistence, and Identity tables
-															for authentication and user management.
-														</p>
-													</div>
-
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions"> 
-															<li>
-																<a href="https://github.com/DeanProgramming/ExpenseTracker" target="_blank" rel="noopener noreferrer" class="button alt">
-																	Download Source code
-																</a>
-															</li>
-															<li>
-																<a href="https://expensetracker-deanh.azurewebsites.net/Expenses" target="_blank" rel="noopener noreferrer" class="button alt">
-																	Live on Azure
-																</a>
-															</li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-
-											<!--
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="Dean H - Online Learning Platform Design Document.pdf" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/TempImageForOnlineLearning.png" alt="" /></a>
-													<header>
-														<h2>Online Learning Platform - InProgress</h2>
-														<h2>ASP.NET Core, Vue.JS, Microsoft SQL Server Management Studio, T-SQL, Entity FrameWork Core, xUnit, Jest and deployed on Azure</h2>
-													</header>
-													
-													<div class="hidden-text">
-														<p>The Online Learning Platform is a scalable web application built with ASP.NET Core and Vue.js, aimed at delivering a seamless and efficient online education experience. Deployed on Azure and leveraging PostgreSQL for database management, this platform enables users to register, browse courses, enroll in them, and track their learning progress with ease.</p>
-														<p>Key features of the Online Learning Platform include:</p>
-														<p>Data Management: Using PostgreSQL and Entity Framework Core, the platform efficiently manages course information, ensuring robust and reliable data storage.</p>
-														<p>Data Management: Was originally built using PostgreSQL but no Longer using it and instead using Microsoft SQL Server for free tier usage with Azure.</p>
-														<p>Enrollment System: Users can browse a variety of courses and enroll seamlessly, with enrolled courses automatically added to their dashboard for easy access.</p>
-														<p>Progress Tracking: The platform tracks user progress through modules and lessons, displaying detailed progress bars and completion statuses for enhanced tracking.</p>
-														<p>Interactive UI: Built with Vue.js, the platform offers a responsive and intuitive interface for course management, enrollment, and progress tracking, enhancing user engagement.</p>
-														<p>Reporting and Analytics: Integrated with SQL Server Reporting Services (SSRS), administrators can generate comprehensive reports on user enrollments, course completions, and other key metrics, supporting data-driven decision-making.</p>
-														<p>Scalability: Deployed on Azure App Service and Azure SQL Database, the platform is designed to scale seamlessly, ensuring optimal performance under varying user loads and future expansion.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
+                <div class="actions">
+                  <a
+                    href="https://www.distinctivegames.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
  
-													<footer>
-														<ul class="actions"> 
-															<li><a href="Dean H - Online Learning Platform Design Document.pdf" target="_blank" rel="noopener noreferrer" class="button alt">Design Documentation</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											-->
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="Dean H - Employee Performance Management System Design Document.pdf" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/EmployeeManagementSystemGif.gif" alt="" /></a>
-													<header>
-														<h2>Employee Performance Management System</h2>
-														<h2>ASP.NET, Razor, Microsoft SQL Server Management Studio, T-SQL, Entity FrameWork Core, JavaScript</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>HR-focused system for managing employee records and performance reviews with reporting and clear data visualisation. Supports employee/admin views, performance history, and dashboards that make trends and outcomes easy to understand.</p>
-													</div>
+      <section id="personal-projects" class="section section-alt">
+        <div class="container">
+          <header class="major">
+            <h2>Personal Projects</h2>
+          </header>
 
-													
-													<div class="hidden-text">
-														<p>The Employee Performance Management System is an ASP.NET Core MVC application designed to streamline the management of employee records and performance evaluations within an organization. Leveraging Microsoft SQL Server, Entity Framework Core, and SSRS, the system provides a comprehensive solution for tracking employee data, conducting performance reviews, and generating insightful reports.</p>
+          <div class="grid">
+            <!-- Expense Tracker -->
+            <article class="card">
+              <a
+                href="https://expensetracker-deanh.azurewebsites.net/Expenses"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/ExpenseTracker.gif" alt="Expense Tracker preview" />
+              </a>
 
-														<p>Key features of the Employee Performance Management System include:</p>
+              <div class="card-body">
+                <h3>Expense Tracker</h3>
+                <p class="muted">
+                  .NET 9, ASP.NET MVC (Razor), SQL Server, EF Core, ASP.NET Identity, JS, Chart.js, Azure
+                </p>
 
-														<p>Data Management: Utilizing Microsoft SQL Server and Entity Framework Core, the system efficiently manages employee records, ensuring accurate and up-to-date information.</p>
+                <div class="project-overview">
+                  <p>
+                    Full-stack expense tracking app with secure accounts, CRUD transactions, and a
+                    live-updating chart dashboard deployed to Azure.
+                  </p>
+                </div>
 
-														<p>Performance Evaluations: HR personnel can conduct thorough performance evaluations through the application, tracking metrics and generating reports that aid in decision-making.</p>
+                <div class="collapsible" id="expense-details">
+                  <p>
+                    Expense Tracker is a full-stack web application built with .NET 9.0 and ASP.NET MVC,
+                    designed to help users record and manage spending. The dashboard provides a monthly
+                    breakdown using Chart.js and updates dynamically without full-page refresh.
+                  </p>
 
-														<p>Insightful Reports: Integrated with SSRS (SQL Server Reporting Services), the system enables the generation of detailed reports, offering insights into team and individual performance trends over time.</p>
+                  <p><strong>Key features:</strong></p>
+                  <ul>
+                    <li>Secure authentication with ASP.NET Identity</li>
+                    <li>Full CRUD for expenses with validation</li>
+                    <li>Monthly charts + average category chart (Chart.js)</li>
+                    <li>Dynamic UI updates for fast UX</li>
+                    <li>Optional demo data regeneration logic</li>
+                  </ul>
+                </div>
 
-														<p>Intuitive Interface: The application provides an intuitive interface for data entry, analysis, and reporting, enhancing user experience and productivity.</p>
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="expense-details"
+                >
+                  Show more
+                </button>
 
-														<p>Graphical Representation: Team performance is visualized using JavaScript, displayed on a bar graph. Employees can view their latest performance review, highlighted in red if below the cutoff line, ensuring clear feedback and goal-setting.</p>
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/ExpenseTracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://expensetracker-deanh.azurewebsites.net/Expenses"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Live on Azure</a
+                  >
+                </div>
+              </div>
+            </article>
 
-														<p>Employee View: Employees have access to their complete performance history, including previous performance reports displayed on a line graph. This feature facilitates self-assessment and goal tracking.</p>
+            <!-- Employee Performance Management System -->
+            <article class="card">
+              <a
+                href="Dean H - Employee Performance Management System Design Document.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/EmployeeManagementSystemGif.gif" alt="Employee management system preview" />
+              </a>
 
-														<p>Future Scalability: Designed with scalability in mind, the system can accommodate future expansions and enhancements, including potential integration with cloud platforms for increased accessibility and additional features.</p>
+              <div class="card-body">
+                <h3>Employee Performance Management System</h3>
+                <p class="muted">ASP.NET, Razor, SQL Server, T-SQL, EF Core, JavaScript</p>
 
-													</div>
-													<button class="toggle-button">Expand Description</button>
+                <div class="project-overview">
+                  <p>
+                    HR-focused system for employee records and performance reviews with dashboards
+                    and clear visualisation. Supports employee/admin views and performance history.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="emp-details">
+                  <p>
+                    ASP.NET Core MVC application to manage employee records and performance evaluations.
+                    Uses SQL Server + EF Core and presents trends with graphs for both teams and individuals.
+                  </p>
+                  <ul>
+                    <li>Employee records management (CRUD)</li>
+                    <li>Performance reviews + history</li>
+                    <li>Visual dashboards (bar + line graphs)</li>
+                    <li>Admin and employee views</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="emp-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/Employee-Performance-Management-System"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="Dean H - Employee Performance Management System Design Document.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Design Doc</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Library Booking System -->
+            <article class="card">
+              <a
+                href="https://youtu.be/0eTwcAkboS8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/LibrarySystem.gif" alt="Library system preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Library Booking System</h3>
+                <p class="muted">.NET 7, .NET Core, Razor Pages</p>
+
+                <div class="project-overview">
+                  <p>
+                    Role-based booking platform with search/filtering, availability checks, user
+                    reservations, and admin inventory management.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="library-details">
+                  <ul>
+                    <li>Search and filters across multiple media types</li>
+                    <li>Real-time availability + user bookings</li>
+                    <li>Admin: inventory CRUD + booking oversight + return confirmation</li>
+                    <li>Designed for future cloud deployment</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="library-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/NetCoreLibrarySystem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://youtu.be/0eTwcAkboS8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Demo Video</a
+                  >
+                  <a
+                    href="Library System Design Doc.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Design Doc</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Weather App -->
+            <article class="card">
+              <a
+                href="https://weatherapp-deanholland.azurewebsites.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/WeatherAppGif.gif" alt="Weather app preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Live Weather and Map App</h3>
+                <p class="muted">.NET 6, ASP.NET MVC, unit testing, Azure</p>
+
+                <div class="project-overview">
+                  <p>
+                    Weather + map app combining current conditions and multi-day forecasts with interactive mapping.
+                    Integrates external APIs and includes unit tests.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="weather-details">
+                  <p>
+                    Integrates OpenWeatherMap and OpenStreetMap to provide real-time weather plus forecast
+                    summaries and mapping in one interface.
+                  </p>
+                  <ul>
+                    <li>Current weather: temperature, humidity, conditions</li>
+                    <li>Forecast processing: averages/high/low per day</li>
+                    <li>Unit test project validating core logic</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="weather-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/WeatherApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://weatherapp-deanholland.azurewebsites.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                  <a
+                    href="Live Weather and Map Application Design Doc.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Design Doc</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Blazor ToDo -->
+            <article class="card">
+              <a
+                href="https://deanprogramming.github.io/ToDoApplicationPublished/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/ToDoApp.gif" alt="Blazor ToDo app preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>ToDo Task Application</h3>
+                <p class="muted">.NET 7, Blazor</p>
+
+                <div class="project-overview">
+                  <p>
+                    Component-driven task manager with create/edit/delete, prioritisation, and date-based grouping
+                    for quick daily planning.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="blazor-details">
+                  <ul>
+                    <li>CRUD tasks with title/description/priority/due date</li>
+                    <li>Date grouping for daily focus</li>
+                    <li>Interactive Blazor UI</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="blazor-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/ToDoListApplication"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://deanprogramming.github.io/ToDoApplicationPublished/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Vue ToDo -->
+            <article class="card">
+              <a
+                href="https://deanprogramming.github.io/VUE-ToDoApplication/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/VUEToDoApp.gif" alt="Vue ToDo app preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>ToDo Task Application</h3>
+                <p class="muted">Vue.js</p>
+
+                <div class="project-overview">
+                  <p>
+                    Vue.js version focusing on reactive UI updates and state-driven rendering for a responsive UX.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="vue-details">
+                  <p>
+                    A rebuild of the ToDo app using Vue, emphasizing reactive state updates and clean client-side flows.
+                  </p>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="vue-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/VUE-ToDoApplication"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://deanprogramming.github.io/VUE-ToDoApplication/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Earth and Moon -->
+            <article class="card">
+              <a
+                href="https://github.com/DeanProgramming/EarthAndMoon"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/EarthandMoonGif.gif" alt="Earth and Moon preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Earth and Moon</h3>
+                <p class="muted">Three.js, HTML, CSS</p>
+
+                <div class="project-overview">
+                  <p>
+                    3D Earth–Moon visualisation with orbit simulation, raycasting hover interactions,
+                    and modular design to support adding more planets.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="earth-details">
+                  <ul>
+                    <li>Rotations + orbit simulation</li>
+                    <li>Raycasting hover UI info</li>
+                    <li>Selectable planet camera-lock logic</li>
+                    <li>Modular, extensible codebase</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="earth-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/EarthAndMoon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Generic Online Shop -->
+            <article class="card">
+              <a
+                href="https://github.com/DeanProgramming/GenericOnlineShop"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/GenericShop.gif" alt="Generic online shop preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Generic Online Shop</h3>
+                <p class="muted">HTML, CSS, JavaScript</p>
+
+                <div class="project-overview">
+                  <p>
+                    Responsive ecommerce-style site with product listing, cart management, and checkout flows.
+                    Built to showcase HTML/CSS fundamentals and interactive JS behaviour.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="shop-details">
+                  <ul>
+                    <li>Store catalogue browsing</li>
+                    <li>Add/remove cart items</li>
+                    <li>Responsive layout for multiple screen sizes</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="shop-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/GenericOnlineShop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://deanprogramming.github.io/GenericOnlineShop/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Load Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Face Recognition Game -->
+            <article class="card">
+              <a
+                href="https://youtu.be/eGx_1i5maN4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/TrackingGame.gif" alt="Face recognition game preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Face Recognition Game — 93% Mark</h3>
+                <p class="muted">Python, OpenCV</p>
+
+                <div class="project-overview">
+                  <p>
+                    Mini-games using face and colour tracking as controls. Built with Python + OpenCV for an education-focused assignment.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="opencv-details">
+                  <ul>
+                    <li>Face tracking control inside an AR/VR-style interaction model</li>
+                    <li>Colour tracking markers for question challenges</li>
+                    <li>Assignment graded at 93%</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="opencv-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/MiniGames-Python-and-OpenCV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Source Code</a
+                  >
+                  <a
+                    href="https://youtu.be/eGx_1i5maN4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Watch Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Outbreak -->
+            <article class="card">
+              <a
+                href="https://indiesharkgamescompany.wordpress.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/ProjectOutbreak.jpg" alt="Project Outbreak preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>Project Outbreak — Co-Owner, AI Lead</h3>
+                <p class="muted">Unity, C#</p>
+
+                <div class="project-overview">
+                  <p>
+                    Vertical slice featuring modular enemy AI with squad-style coordination for a top-down roguelike prototype.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="outbreak-details">
+                  <p>
+                    Built modular AI behaviours that supported dynamic enemy selection during procedural generation,
+                    while keeping encounters readable and fair.
+                  </p>
+                  <p>Presented at Transfuzer 2020 and participated in events via Game Republic.</p>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="outbreak-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://indie-shark-games.itch.io/project-outbreak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Play the Vertical Slice</a
+                  >
+                  <a
+                    href="https://indiesharkgamescompany.wordpress.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Go to Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Bind and Banish -->
+            <article class="card">
+              <a
+                href="https://www.youtube.com/watch?v=unvfayUzqUc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/BindNBanishLogo.png" alt="Bind and Banish logo" />
+              </a>
+
+              <div class="card-body">
+                <h3>Bind and Banish</h3>
+                <p class="muted">Unity, C#</p>
+
+                <div class="project-overview">
+                  <p>
+                    Team-built first-person ghost capturing game featuring state-driven ghost behaviour and custom avoidance.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="bind-details">
+                  <p>
+                    I implemented AI behaviours and a custom avoidance system. The ghost behaviour used a finite state machine.
+                  </p>
+                  <ul>
+                    <li>Zigzag flight patterns for ambient movement</li>
+                    <li>Hiding in objects and manipulating lights</li>
+                    <li>Aggressive “revealed” state: throws objects, taunts player</li>
+                    <li>Group gathering and wandering using NavMesh + custom movement</li>
+                  </ul>
+                  <p>
+                    Awarded <strong>Best Team</strong> at The Game Republic Student Showcase 2021.
+                  </p>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="bind-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://www.youtube.com/watch?v=unvfayUzqUc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Watch the Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- DTH -->
+            <article class="card">
+              <a
+                href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/DTHGIF.gif" alt="DTH game preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>DTH — Search For a Star 2021 Submission</h3>
+                <p class="muted">Unity, C#</p>
+
+                <div class="project-overview">
+                  <p>
+                    Competition entry created by extending an existing Unity codebase with new features,
+                    refined mechanics, and performance improvements.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="dth-details">
+                  <p>
+                    Ranked <strong>13th out of 54</strong> participants. Focused on expanding the provided codebase
+                    and delivering a polished final experience.
+                  </p>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="dth-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://hollandprogramming.itch.io/dth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Play the Game</a
+                  >
+                  <a
+                    href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Judges Feedback</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Mad Escape -->
+            <article class="card">
+              <a
+                href="https://itch.io/jam/sfasx-games-programming/rate/555855"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+              >
+                <img src="images/MadEscapeGif.gif" alt="The Mad Escape preview" />
+              </a>
+
+              <div class="card-body">
+                <h3>The Mad Escape — Rising Star 2020 Submission</h3>
+                <p class="muted">Unity, C#</p>
+
+                <div class="project-overview">
+                  <p>
+                    Improved and polished a provided Unity codebase into a complete, engaging game.
+                    Enhanced gameplay flow, interactions, and performance.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="mad-details">
+                  <p>
+                    Achieved <strong>joint 4th</strong> place and earned the <strong>One to Look Out For</strong> achievement.
+                  </p>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="mad-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://hollandprogramming.itch.io/the-mad-escape"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Play the Game</a
+                  >
+                  <a
+                    href="https://itch.io/jam/sfasx-games-programming/rate/555855"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                    >Judges Feedback</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" class="site-footer">
+        <div class="container">
+          <h2>Get in touch</h2>
+          <p class="muted">
+            <a href="mailto:Holland.d@hotmail.co.uk">Holland.d@hotmail.co.uk</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <div id="compact-footer" aria-label="Footer shortcuts">
+      <div class="container compact-inner">
+        <span class="footer-left">
+          © <span id="year"></span> Dean Holland
+        </span>
+
+        <nav class="footer-icons" aria-label="Social links">
+			<a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email">
+				<i class="fas fa-envelope" aria-hidden="true"></i>
+			</a>
+
+			<a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+				<i class="fab fa-github" aria-hidden="true"></i>
+			</a>
+
+			<a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+				<i class="fab fa-linkedin" aria-hidden="true"></i>
+			</a>
+
+			<a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+				<i class="fas fa-file-pdf" aria-hidden="true"></i>
+			</a>
+
+			<a class="icon-link" href="#header" aria-label="Back to top">
+				<i class="fas fa-arrow-up" aria-hidden="true"></i>
+			</a>
+		</nav>
+
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
  
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/Employee-Performance-Management-System" target="_blank" rel="noopener noreferrer" class="button alt">Download Source code</a></li>  
-															<li><a href="Dean H - Employee Performance Management System Design Document.pdf" target="_blank" rel="noopener noreferrer" class="button alt">Design Documentation</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://youtu.be/0eTwcAkboS8" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/LibrarySystem.gif" alt="" /></a>
-													<header>
-														<h2>Library Booking System</h2>
-														<h2>.Net 7.0, .NetCore, Razor Page</h2>
-													</header> 
-													<div class="project-overview"> 
-													<p>Role-based library booking platform supporting search/filtering, real-time availability checks, and user reservations. Includes admin tooling for inventory CRUD, booking oversight, and return confirmation.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>The Library Management System is a robust .NET Core and .NET 7.0 project designed to simplify the management and exploration of a vast collection of books, DVDs, and CDs.</p>
-														<p>Key features of the Library Management System include:</p>
-													
-														<p>Search and Filter Capabilities: Users can efficiently search through the database of books using various criteria such as title, publication year, author, and type (book, DVD, CD). This makes it easy to locate specific items in the library's extensive collection.</p>
-													
-														<p>Availability Check: The system allows users to check the availability of items in real-time, ensuring that they can quickly identify whether a desired book, DVD, or CD is currently in stock.</p>
-													
-														<p>Secure Net Identity Login: The application prioritizes security with Net Identity integration, providing a robust and secure authentication system for user login.</p>
-													
-														<p>User Functionality: Once logged in, regular users can explore the database, but they also have the additional ability to book items. A dedicated menu allows them to view a list of items they have booked, providing a convenient overview of their current library activity.</p>
-													
-														<p>Admin Privileges: Administrators, equipped with special roles, gain access to advanced functionalities. They can view the booked items of all users, apply filters based on various criteria, and confirm the return of items, making them available for the next users.</p>
-													
-														<p>CRUD Operations: Admins have the power to create, read, update, and delete elements in the system, ensuring efficient management of the library's inventory. They can also delve into the complete book history, revealing the usage patterns and previous users of each item.</p>
-													
-														<p>Future Enhancements: The project is designed with future scalability in mind. While currently utilizing a local database, there are plans to expand capabilities by deploying on cloud platforms such as Microsoft Azure. This will provide enhanced scalability, reliability, and additional cloud-based features for the library management application.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/NetCoreLibrarySystem" target="_blank" rel="noopener noreferrer" class="button alt">Download Source code</a></li>
-															<li><a href= "https://youtu.be/0eTwcAkboS8" target="_blank" rel="noopener noreferrer" class="button alt">Watch Quick Video</a></li>
-														</ul>
-													</footer>
-
-													<footer>														
-														<ul class="actions">
-															<li><a href="Library System Design Doc.pdf" target="_blank" rel="noopener noreferrer" class="button alt">Design Documentation</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://weatherapp-deanholland.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/WeatherAppGif.gif" alt="" /></a>
-													
-													<header>
-														<h2> Live Weather and Map App</h2>
-														<h2> .Net 6.0, ASP.NET MVC, Unit testing and Deployed on Azure</h2>
-													</header> 
-													<div class="project-overview"> 
-													<p>Weather + map web application combining live conditions and multi-day forecasts with interactive mapping. Integrates external APIs, includes unit tests for core logic, and is deployed on Azure.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>This .NET and ASP.NET MVC program combines OpenWeatherMap and OpenStreetMap APIs to display real-time weather and map data, providing a convenient all-in-one tool.</p>
- 
-														<p>By leveraging the OpenWeatherMap API, the program can retrieve weather information for a given location. This includes current weather conditions such as temperature, humidity, and weather descriptions like sunny, cloudy, or rainy. </p>
-
-														<p> It also does another call to OpenWeatherMap API to get the forecast for the next couple of days and manipulates that data to find the average temperature, highest temperature and lowest temperature for that day. </p> 
-
-														<p>In conjunction with the OpenStreetMap API, the program enables users to visualize maps and obtain location-based information. This can include displaying a map of a specific location, zooming in and out, and retrieving details about nearby places of interest, roads, or landmarks.</p>
-
-														<p>Combining the power of both APIs, the program offers users a comprehensive experience by presenting weather information overlaid on an interactive map. Users can select a location, view the current weather conditions for that area, and explore the surroundings through the map interface.</p>
-
-														<p>In addition to the main project, this repository includes a companion project containing unit tests for the .NET components. The test project comprises 10 different unit tests that validate the functionality, performance, and reliability of various aspects of the application.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/WeatherApp" target="_blank" rel="noopener noreferrer" class="button alt">Download Source code</a></li>
-															<li><a href= "https://weatherapp-deanholland.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="button alt">Go to Website</a></li>
-														</ul>
-													</footer>
-													<footer>														
-														<ul class="actions">
-															<li><a href="Live Weather and Map Application Design Doc.pdf" target="_blank" rel="noopener noreferrer" class="button alt">Design Documentation</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>	
-											
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://deanprogramming.github.io/ToDoApplicationPublished/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/ToDoApp.gif" alt="" /></a>
-													 
-													<header>
-														<h2> ToDo Task Application</h2>
-														<h2> .Net 7.0 and Blazor</h2>
-													</header> 
-													<div class="project-overview"> 
-													<p>Interactive task manager built with Blazor, featuring create/edit/delete flows, prioritisation, and date-based grouping for quick daily planning. Designed for a smooth, component-driven UI.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>This .NET 7.0 and Blazor ToDoList application provides a seamless task management experience, allowing users to effortlessly create, edit, and delete tasks. The application is designed to streamline productivity with a focus on task organization and prioritization.</p>
-
-														<p>Each task in the ToDoList has a title, description, priority level, and due date. The application intelligently sorts tasks by date, presenting them in separate groups for easy navigation. Users can quickly glance at their daily agenda and prioritize tasks based on deadlines and importance.</p>
-
-														<p>With the interactive user interface powered by Blazor, the ToDoList app offers a user-friendly experience for managing tasks. The dynamic interface allows users to create tasks with ease, edit details on the fly, and mark tasks as completed or delete them when necessary.</p>
-
-														<p>The application keeps track of completed tasks for each day and provides a clear overview of task completion. It further enhances productivity by sorting tasks based on their priority, ensuring that users can efficiently tackle high-priority items first.</p>
-
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/ToDoListApplication" target="_blank" rel="noopener noreferrer" class="button alt">Download Source code</a></li>
-															<li><a href= "https://deanprogramming.github.io/ToDoApplicationPublished/" target="_blank" rel="noopener noreferrer" class="button alt">Go to Website</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>	
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://deanprogramming.github.io/VUE-ToDoApplication/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/VUEToDoApp.gif" alt="" /></a>
-													 
-													<header>
-														<h2> ToDo Task Application</h2>
-														<h2> Vue.JS</h2>
-													</header> 
-													<div class="project-overview"> 
-													<p>Vue.js reimplementation of the ToDo app, focusing on reactive UI, fast updates, and clean client-side workflows. Demonstrates modern frontend patterns and state-driven rendering for a responsive UX.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>This is a repeat of my previous ToDoApplication but this time built using VUE.JS </p>
-
-														<p>This VUE.JS ToDoList application provides a seamless task management experience, allowing users to effortlessly create, edit, and delete tasks. The application is designed to streamline productivity with a focus on task organization and prioritization.</p>
-
-														<p>Each task in the ToDoList has a title, description, priority level, and due date. The application intelligently sorts tasks by date, presenting them in separate groups for easy navigation. Users can quickly glance at their daily agenda and prioritize tasks based on deadlines and importance.</p>
-
-														<p>With the interactive user interface powered by Vue, the ToDoList app offers a user-friendly experience for managing tasks. The dynamic interface allows users to create tasks with ease, edit details on the fly, and mark tasks as completed or delete them when necessary.</p>
-
-														<p>The application keeps track of completed tasks for each day and provides a clear overview of task completion. It further enhances productivity by sorting tasks based on their priority, ensuring that users can efficiently tackle high-priority items first.</p>
-
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/VUE-ToDoApplication" target="_blank" rel="noopener noreferrer" class="button alt">Download Source code</a></li>
-															<li><a href= "https://deanprogramming.github.io/VUE-ToDoApplication/" target="_blank" rel="noopener noreferrer" class="button alt">Go to Website</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>	
-											
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://github.com/DeanProgramming/EarthAndMoon" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/EarthandMoonGif.gif" alt="" /></a>
-													<header>
-														<h2>Earth and Moon</h2>
-														<h2>THREE.JS, Html, CSS</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>3D interactive Earth–Moon visualisation using Three.js with rotation/orbit simulation, raycasting hover interactions, and GUI-based info display. Built with a modular structure to support adding more planets.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>Earth and Moon is an interactive project developed using Three.js, a JavaScript library for 3D rendering. The project showcases an immersive visualization of the Earth and Moon system.</p>
-
-														<p>In this application, both the Earth and the Moon are rendered, complete with their distinctive textures and details. The objects are dynamically rotated along their axes, creating a realistic visual representation. Furthermore, the Moon orbits the Earth with a slight angle, adding to the overall authenticity of the simulation.</p>
-														
-														<p>A key feature of the project is the interactive functionality achieved through raycasting. By hovering the mouse over the planet, the application detects the interaction and displays relevant information using a Graphical User Interface (GUI). This provides an engaging and informative experience for users as they explore the planetary bodies.</p>
-														
-														<p>The application also incorporates a unique feature that allows users to select planets. By utilizing vector math, the application ensures that the selected planet maintains a fixed distance from the camera, regardless of its rotation. This functionality enables users to explore the selected planet from different angles and perspectives.</p>
-														
-														<p>One of the notable aspects of the project is its modular and extensible design. The codebase is structured in a generic fashion, allowing for the easy addition of more planets in the future. This flexibility ensures that the application can accommodate future expansions and additions without requiring significant modifications to the existing code.</p>
-														
-														<p>By leveraging Three.js and implementing interactive features, this project provides an immersive and educational experience for users to explore and learn about the Earth and Moon system. The modular design further enhances the project's scalability and potential for future enhancements.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-													
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/EarthAndMoon" target="_blank" rel="noopener noreferrer" class="button alt">Download Source Code</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://github.com/DeanProgramming/GenericOnlineShop" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/GenericShop.gif" alt="" /></a>
-													<header>
-														<h2>Generic Online Shop</h2>
-														<h2>Html, CSS, JavaScript</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>Responsive ecommerce-style website with a store catalogue, cart management, and checkout-style flows. Built to showcase strong HTML/CSS fundamentals and interactive JavaScript UI behaviour.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>The Generic Online Shop is a website that I personally developed to showcase my expertise in HTML, CSS, and JavaScript. This project demonstrates my skills in creating a dynamic and responsive website that can adapt to different screen resolutions.</p>
-
-														<p>The website features a comprehensive store page where users can browse and select multiple items. It provides seamless functionality to modify the shopping cart, allowing users to add or remove items as needed. Furthermore, the website facilitates smooth and secure checkout processes, enabling users to purchase the selected items hassle-free.</p>
-
-														<p>One of the notable aspects of the website is its versatility. Users have the convenience of selecting items directly from the home page and seamlessly adding them to their shopping cart while exploring the store page. This intuitive user experience enhances the overall usability and convenience of the website.</p>
-
-														<p>By developing the Generic Online Shop, I have not only demonstrated my technical skills in HTML, CSS, and JavaScript, but also showcased my ability to create a user-friendly and efficient e-commerce platform. The project serves as a testament to my proficiency in front-end web development and my capability to deliver responsive and functional websites.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/GenericOnlineShop" target="_blank" rel="noopener noreferrer" class="button alt">Download Source Code</a></li>
-															<li><a href="https://deanprogramming.github.io/GenericOnlineShop/index.html" target="_blank" rel="noopener noreferrer" class="button alt">Load Website</a></li>  
-														</ul>
-													</footer>
-												</section>
-											</div>
-											
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://youtu.be/eGx_1i5maN4" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/TrackingGame.gif" alt="" /></a>
-													<header>
-														<h2>Face Recognition Game - 93% Mark</h2>
-														<h2>Python and OpenCV Developed</h2>
-													</header>
-													<div class="project-overview">
-													<p>Collection of mini-games built with Python + OpenCV using face and colour tracking as interactive controls. Designed for school-age audiences, showcasing practical computer vision mechanics in gameplay.</p>
-													</div>
-
-													
-													<div class="hidden-text">
-														<p>For a University assignment, I successfully developed three engaging mini games targeting school children. Two of these games utilized Augmented Reality (AR), while one was built for Virtual Reality (VR). Throughout the development process, I utilized Python along with the OpenCV libraries to create these interactive experiences.</p>
-
-														<p>One of the AR games incorporated a gamemode that employed face tracking. This feature allowed users to navigate and interact within a VR world by simply moving their face. It provided an immersive and intuitive way for children to engage with the game.</p>
-														
-														<p>The second AR game employed color tracking to detect and track markers, enabling children to complete various question-based challenges in an AR environment. By utilizing the camera feed, the game presented a unique perspective and enhanced the learning experience.</p>
-														
-														<p>The third game utilized face tracking technology to control a point on the screen. By detecting and tracking the user's face, children could manipulate the point's movement and interact with the game in an intuitive and engaging manner.</p>
-														
-														<p>I am delighted to share that I received a remarkable 93% mark for this assignment, which I am incredibly proud of. The outcome of the assignment not only showcased my proficiency in programming with Python and utilizing the OpenCV libraries but also demonstrated my ability to create interactive and educational experiences for young learners.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://github.com/DeanProgramming/MiniGames-Python-and-OpenCV" target="_blank" rel="noopener noreferrer" class="button alt">Download Source Code</a></li>
-															<li><a href="https://youtu.be/eGx_1i5maN4" target="_blank" rel="noopener noreferrer" class="button alt">Watch the Demo</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://indiesharkgamescompany.wordpress.com/" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/ProjectOutbreak.jpg" alt="" /></a>
-													<header>
-														<h2>Project Outbreak || Co Owner - AI Lead</h2>
-														<h2>Unity C# Developed</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>Prototype vertical slice developed enemy AI behaviour, building modular behaviours and squad-style coordination. Focused on dynamic enemy selection for procedural gameplay while keeping encounters fair and readable.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>Instead of pursuing a traditional placement year, I chose to embark on an entrepreneurial journey with a group of fellow students whom I met during a game jam. Together, we founded our own independent game development company called Indie-Shark Games. Over the course of a year, we dedicated our efforts to developing our own game titled Project Outbreak.</p>
-
-														<p>Project Outbreak is a top-down roguelike game, and as the AI lead, my primary responsibility was to create sophisticated enemy AI systems. These enemies were designed to possess depth, working together as cohesive squads. I focused on developing modular AI behaviors that allowed for a dynamic selection of enemies during random generation. This ensured that the enemies could adapt and work together effectively in any given situation, while maintaining a sense of fairness for the player.</p>
-														
-														<p>In order to promote our game and company, we actively participated in various events and joined Game Republic. These opportunities provided a platform to showcase our game to a wider audience. Notably, we were able to present our game at Transfuzer 2020, a significant milestone for us.</p>
-														
-														<p>Regrettably, due to some team members having another year of university commitments, the project was left as a vertical slice. Nevertheless, we take immense pride in the progress we made and the accomplishments we achieved during this time.</p>
-														
-														<p>By venturing into entrepreneurship and creating our own game, I gained invaluable experience in project management, team collaboration, and AI development.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-
-													<footer>
-														<ul class="actions">
-															<li><a href="https://indie-shark-games.itch.io/project-outbreak" target="_blank" rel="noopener noreferrer" class="button alt">Play the Vertical Slice</a></li>
-															<li><a href="https://indiesharkgamescompany.wordpress.com/" target="_blank" rel="noopener noreferrer" class="button alt">Go to Website</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://www.youtube.com/watch?v=unvfayUzqUc" class="image featured"><img src="images/BindNBanishLogo.png" alt="" /></a>
-													<header>
-														<h2>Bind and Banish</h2>
-														<h2>Unity C# Developed</h2>
-													</header>
-													<div class="project-overview">
-													<p>Team-built first-person ghost capturing game featuring state-driven ghost behaviour and custom avoidance. Implemented multiple AI behaviours and navigation patterns to create engaging, reactive encounters.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>As part of my Final Year Team Project, our team of seven members collaborated to develop an intriguing first-person ghost capturing game.</p>
-
-														<p>In this project, I assumed the role of an AI programmer, primarily responsible for implementing various AI behaviors and developing a custom avoidance system. To control the ghost's behavior, I utilized a finite state machine approach. Some of the key AI behaviors I created include:</p>
-
-														<p> - Flying around the room in a zigzag pattern: The ghost navigates through the environment, creating an eerie atmosphere.</p>
-														<p> - Hiding in objects and manipulating lights: The ghost seeks refuge in objects, occasionally manipulating lights by turning them on and off. This dynamic behavior adds an element of surprise for the players.</p>
-														<p> - Aggressive behavior when revealed: Once revealed, the ghost intensifies its actions by flying around the room, throwing objects at the player, and taunting them. This adds a thrilling element to the gameplay.</p>
-														<p> - Group gathering and wandering: The ghosts gather in groups and navigate around the hotel environment using Unity Nav Mesh for pathfinding. I implemented my custom movement system to enhance their movement between waypoints.</p>
-
-
-														<p>Additionally, I made significant contributions to several other systems within the game. However, I take immense pride in the development of the ghost movement system, which I consider to be my most notable achievement in the project.</p>
-
-														<p>Our hard work and dedication paid off when our team received the Best Team award at The Game Republic Student Showcase 2021. This recognition is a testament to the collaborative efforts and successful outcomes achieved by our team.</p>
-
-														<p>Working on this project not only allowed me to sharpen my AI programming skills but also provided valuable experience in teamwork, problem-solving, and software development. It further reinforced my passion for creating immersive and engaging experiences in the field of technology.
-														</div>
-														<button class="toggle-button">Expand Description</button>
-													
-													<footer>
-													<ul class="actions">
-														<li><a href="https://www.youtube.com/watch?v=unvfayUzqUc" target="_blank" rel="noopener noreferrer" class="button alt">Watch the Demo</a></li>
-													</ul>
-													</footer>
-												</section>
-											</div>
-
-
-
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://itch.io/jam/sfas-games-programming-2021/rate/893679" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/DTHGIF.gif" alt="" /></a>
-													<header>
-														<h2>DTH - Search For a Star 2021: Games Programming Submission</h2>
-														<h2>Unity C# Developed</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>Competition entry created by extending an existing Unity codebase with new features, refined mechanics, and performance improvements. Focused on delivering a polished experience under constraints.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>DTH was my submission for the Search for a Star 2021 Grads in Games competition. The project presented an exciting challenge as I had the opportunity to build upon an existing codebase, allowing me to showcase my creativity as a developer and demonstrate my strong programming skills.</p>
-
-														<p>Throughout the project, my focus was on enhancing and expanding the given codebase. I implemented new features, refined gameplay mechanics, and optimized performance, all with the goal of creating a compelling and polished experience that would highlight my abilities and potential in the field.</p>
-														
-														<p>I'm proud to share that my efforts were recognized, and I secured the 13th place out of 54 participants in the competition. This achievement speaks to the quality and dedication I invested in the project, as well as its impact within the competition.</p>
-														
-														<p>Participating in the Search for a Star competition provided me with an invaluable opportunity for growth and learning. It allowed me to push my boundaries as a developer, refine my programming expertise, and fuel my passion for creating immersive and enjoyable experiences. While my involvement was in the context of game development, the skills and lessons I gained from this experience are applicable to a broader range of programming domains, and I'm excited to leverage them in new and diverse projects moving forward</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-											
-													<footer>
-														<ul class="actions">
-															<li><a href="https://hollandprogramming.itch.io/dth" target="_blank" rel="noopener noreferrer" class="button alt">Play the game</a></li>
-															<li><a href="https://itch.io/jam/sfas-games-programming-2021/rate/893679" target="_blank" rel="noopener noreferrer" class="button alt">Judges Feedback</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-
-
-											<div class="col-6 col-12-small">
-												<section class="box">
-													<a href="https://itch.io/jam/sfasx-games-programming/rate/555855" target="_blank" rel="noopener noreferrer" class="image featured"><img src="images/MadEscapeGif.gif" alt="" /></a>
-													<header>
-														<h2>THE MAD ESCAPE - Rising Star 2020: Games Programming Submission</h2>
-														<h2>Unity C# Developed</h2>
-													</header>
-													<div class="project-overview"> 
-													<p>Competition project focused on improving and polishing a provided Unity codebase into a complete, engaging game. Enhanced gameplay flow, interactions, and performance to deliver a strong final submission.</p>
-													</div>
-
-													<div class="hidden-text">
-														<p>The Mad Escape was my submission for the Rising Star 2020 Grads in Games competition. This project provided an exciting opportunity for me to demonstrate my skills as a creative developer and showcase my strong programming abilities.</p>
-
-														<p>Working with a given codebase, I dedicated my efforts to enhance and build upon it, creating an engaging and captivating game experience. Throughout the project, I focused on refining gameplay mechanics, improving user interactions, and optimizing performance to deliver a polished final product.</p>
-														
-														<p>I'm thrilled to share that The Mad Escape achieved joint 4th place in the Rising Star category of the competition. This recognition is a testament to the hard work and dedication I put into the project, as well as the impact it made within the competition.</p>
-														
-														<p>Moreover, the game's success also earned me the One to Look out for Achievement, further highlighting my potential and dedication in the field.</p>
-														
-														<p>Participating in the Rising Star competition provided me with an invaluable platform to showcase my talents and gain recognition within the industry. It allowed me to expand my skills as a developer and affirmed my passion for creating captivating experiences. While my involvement was in the context of game development, the skills and achievements I gained are transferrable to various domains, and I'm excited to explore new opportunities and challenges in my career.</p>
-													</div>
-													<button class="toggle-button">Expand Description</button>
-													
-													<footer>
-														<ul class="actions">
-															<li><a href="https://hollandprogramming.itch.io/the-mad-escape" target="_blank" rel="noopener noreferrer" class="button alt">Play the game</a></li>
-															<li><a href="https://itch.io/jam/sfasx-games-programming/rate/555855" target="_blank" rel="noopener noreferrer" class="button alt">Judges Feedback</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>  
-										</div> 
-									</section> 
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-
-			<!-- Footer -->
-
-		</div>
-
-		<div id="compact-footer" aria-label="Footer shortcuts">
-  <div class="compact-inner">
-    <span class="footer-left">© <span id="year"></span> Dean Holland</span>
-
-    <nav class="footer-icons" aria-label="Social links">
-      <!-- Replace # with your real links -->
-      <a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email">
-        <span class="icon solid fa-envelope"></span>
-      </a>
-
-      <a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <span class="icon brands fa-github"></span>
-      </a>
-
-      <a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <span class="icon brands fa-linkedin"></span>
-      </a>
-
-      <a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
-        <span class="icon solid fa-file-pdf"></span>
-      </a>
-
-      <a class="icon-link" href="#header" aria-label="Back to top">
-        <span class="icon solid fa-arrow-up"></span>
-      </a>
-    </nav>
-  </div>
-</div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/tab.js"></script>
-
-	</body>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/tab.js" defer></script>
+  </body>
 </html>
