@@ -111,7 +111,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* Big nav tabs (spaced, clear, no underline) */
 .site-nav {
   margin-top: 1.35rem;
 }
@@ -147,6 +146,32 @@ a:hover {
   background: var(--accent);
   color: #fff;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    margin-top: .5rem;
+  }
+
+  .site-nav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;        /* force single row */
+    justify-content: center;
+    gap: .35rem;
+  }
+
+  .site-nav li {
+    flex: 0 1 auto;           /* allow shrinking */
+  }
+
+  .site-nav a {
+    font-size: .78rem;        /* small but readable */
+    padding: .4em .6em;       /* compact pills */
+    min-width: 0;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
 }
 
 /*  Compact Nav*/
@@ -210,6 +235,40 @@ body.show-compact-nav #compact-nav {
   text-decoration: underline;
   text-underline-offset: 6px;
   opacity: 1;
+}
+ 
+@media (max-width: 600px) {
+  #compact-nav {
+    height: auto;              
+  }
+
+  #compact-nav .compact-inner {
+    padding: .55rem 1rem;
+    flex-wrap: wrap;          
+    justify-content: center;   
+    gap: .4rem .9rem;
+  }
+
+  #compact-nav .brand {
+    font-size: 18px;        
+    text-align: center;
+    flex: 1 1 100%;           
+  }
+
+  #compact-nav .compact-links {
+    justify-content: center;
+    flex: 1 1 100%;         
+    gap: .55rem .9rem;
+  }
+
+  #compact-nav .compact-links a {
+    font-size: 16px;            
+    white-space: nowrap;      
+  }
+ 
+  #compact-nav .compact-links a.active {
+    text-underline-offset: 4px;
+  }
 }
 
 
@@ -433,4 +492,32 @@ button.toggle-button:hover {
 #compact-footer .icon-link .icon {
   font-size: 1.5rem;  
   line-height: 1;
+}
+
+@media (max-width: 600px) {
+  #compact-footer .compact-inner {
+    height: auto;             
+    padding: .5rem 1rem;       
+    flex-wrap: wrap;        
+    justify-content: center;   
+    gap: .5rem .9rem;
+  }
+
+  #compact-footer .footer-left {
+    white-space: normal;     
+    font-size: .95rem;     
+    text-align: center;
+    flex: 1 1 100%;            
+  }
+
+  #compact-footer .footer-icons {
+    flex: 0 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #compact-footer .icon-link i,
+  #compact-footer .icon-link .icon {
+    font-size: 1.25rem;       
+  }
 }
