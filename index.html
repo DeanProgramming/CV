@@ -1,3 +1,8 @@
+<link rel="preload" href="assets/fonts/sourcesanpro-300.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="assets/fonts/sourcesanpro-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sourcesanpro-900.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="assets/css/main.css" />
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,18 +12,9 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>Dean Holland Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic&display=swap"
-    />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
+
+  <link rel="icon" href="assets/HomeIcon.ico" type="image/x-icon">
 
   <body class="homepage">
     <div id="scroll-progress" aria-hidden="true"></div>
@@ -31,7 +27,7 @@
 
         <nav class="site-nav" aria-label="Primary navigation">
           <ul>
-            <li class>
+            <li>
               <a href="#main" data-spy="main">Professional Projects</a>
             </li>
             <li>
@@ -45,11 +41,6 @@
                 >CV</a
               >
             </li>
-            <!--
-            <li>
-              <a href="achievements.html">Achievements</a>
-            </li>
-            -->
           </ul>
         </nav>
       </div>
@@ -63,9 +54,6 @@
           <a href="#main" data-spy="main">Professional</a>
           <a href="#personal-projects" data-spy="personal-projects">Personal</a>
           <a href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-            <!--
-          <a href="achievements.html" target="_blank" rel="noopener noreferrer">Achievements</a>
-            -->
         </nav>
       </div>
     </div>
@@ -87,7 +75,7 @@
                 rel="noopener noreferrer"
                 class="card-media"
               > 
-                <img src="images/HighlightGames.png" alt="Highlight Games website preview" />
+                <img src="images/HighlightGamesWEBP.webp" alt="Highlight Games website preview" />
               </a>
 
               <div class="card-body">
@@ -166,7 +154,7 @@
                 rel="noopener noreferrer"
                 class="card-media"
               >
-                <img src="images/DistinctiveGames.png" alt="Distinctive Games website preview" />
+                <img src="images/DistinctiveGamesWEBP.webp" alt="Distinctive Games website preview" />
               </a>
 
               <div class="card-body">
@@ -434,13 +422,6 @@
                     rel="noopener noreferrer"
                     class="button alt"
                     >Source Code</a
-                  >
-                  <a
-                    href="https://youtu.be/0eTwcAkboS8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Demo Video</a
                   >
                   <a
                     href="Library System Design Doc.pdf"
@@ -872,7 +853,7 @@
                 class="card-media"
                 loading="lazy"
               >
-                <img src="images/ProjectOutbreak.jpg" alt="Project Outbreak preview" />
+                <img src="images/ProjectOutbreakWEBP.webp" alt="Project Outbreak preview" />
               </a>
 
               <div class="card-body">
@@ -930,7 +911,7 @@
                 class="card-media"
                 loading="lazy"
               >
-                <img src="images/BindNBanishLogo.png" alt="Bind and Banish logo" />
+                <img src="images/BindNBanishWEBP.webp" alt="Bind and Banish logo" />
               </a>
 
               <div class="card-body">
@@ -977,76 +958,9 @@
                   >
                 </div>
               </div>
-            </article>
+            </article> 
 
-            <!-- DTH -->
-            <article class="card">
-              <a
-                href="https://itch.io/jam/sfas-games-programming-2021/rate/893679" 
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video
-                  src="images/DTHMP4.mp4"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  loading="lazy"
-                  style="width: 100%; height: 100%; object-fit: cover;"
-                >
-                Your browser does not support the video tag.
-              </video>
-            </a>
-
-              <div class="card-body">
-                <h3>DTH — Search For a Star 2021 Submission</h3>
-                <p class="muted">Unity, C#</p>
-
-                <div class="project-overview">
-                  <p>
-                    Competition entry created by extending an existing Unity codebase with new features,
-                    refined mechanics, and performance improvements.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="dth-details">
-                  <p>
-                    Ranked <strong>13th out of 54</strong> participants. Focused on expanding the provided codebase
-                    and delivering a polished final experience.
-                  </p>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dth-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://hollandprogramming.itch.io/dth"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Play the Game</a
-                  >
-                  <a
-                    href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Judges Feedback</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Mad Escape -->
+            <!-- DTH + Mad Escape -->
             <article class="card">
               <a 
                 href="https://itch.io/jam/sfas-games-programming-2021/rate/893679" 
@@ -1054,33 +968,36 @@
                 rel="noopener noreferrer"
                 class="card-media"
               >
-                <video
-                  src="images/MadEscapeMP4.mp4"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  loading="lazy"
-                  style="width: 100%; height: 100%; object-fit: cover;"
-                >
-                Your browser does not support the video tag.
-              </video>
-            </a>
-
+                  <video
+                    src="images/CombinedSearchForAStarMP4.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    loading="lazy"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                  >
+                  Your browser does not support the video tag.
+                </video>
+              </a>
               <div class="card-body">
-                <h3>The Mad Escape — Rising Star 2020 Submission</h3>
+                <h3>DTH & The Mad Escape — Programming Competition Submissions (2020–2021)</h3>
                 <p class="muted">Unity, C#</p>
 
                 <div class="project-overview">
                   <p>
-                    Improved and polished a provided Unity codebase into a complete, engaging game.
-                    Enhanced gameplay flow, interactions, and performance.
+                    Competition entries developed by analysing and extending existing Unity codebases.
+                    Implemented new features, improved system structure, optimised performance,
+                    and refined functionality within strict time and technical constraints.
                   </p>
                 </div>
 
-                <div class="collapsible" id="mad-details">
+                <div class="collapsible" id="competition-details">
                   <p>
-                    Achieved <strong>joint 4th</strong> place and earned the <strong>One to Look Out For</strong> achievement.
+                    Achieved <strong>joint 4th place</strong> and received the <strong>“One to Look Out For”</strong>
+                    recognition in 2020, followed by a <strong>13th place finish out of 54 participants</strong>
+                    in 2021. Focused on understanding legacy code, designing scalable improvements,
+                    and delivering robust, high-quality software under competition conditions.
                   </p>
                 </div>
 
@@ -1088,25 +1005,25 @@
                   class="toggle-button"
                   type="button"
                   aria-expanded="false"
-                  aria-controls="mad-details"
+                  aria-controls="competition-details"
                 >
                   Show more
                 </button>
 
-                <div class="actions">
+                <div class="actions"> 
                   <a
-                    href="https://hollandprogramming.itch.io/the-mad-escape"
+                    href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Play the Game</a
+                    >DTH - Judges Feedback</a
                   >
                   <a
                     href="https://itch.io/jam/sfasx-games-programming/rate/555855"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Judges Feedback</a
+                    >Mad Escape Judges Feedback</a
                   >
                 </div>
               </div>
@@ -1131,27 +1048,27 @@
           © <span id="year"></span> Dean Holland
         </span>
 
-        <nav class="footer-icons" aria-label="Social links">
-			<a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email">
-				<i class="fas fa-envelope" aria-hidden="true"></i>
-			</a>
+          <nav class="footer-icons" aria-label="Social links">
+            <a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email"> 
+              <img src="assets/svgs/envelope-solid-full.svg" class="fa-svg" aria-hidden="true">
+            </a>
 
-			<a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-				<i class="fab fa-github" aria-hidden="true"></i>
-			</a>
+            <a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub"> 
+              <img src="assets/svgs/github-brands-solid-full.svg" class="fa-svg" aria-hidden="true">
+            </a>
 
-			<a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-				<i class="fab fa-linkedin" aria-hidden="true"></i>
-			</a>
+            <a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="assets/svgs/linkedin-brands-solid-full.svg" class="fa-svg" aria-hidden="true">
+            </a>
 
-			<a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
-				<i class="fas fa-file-pdf" aria-hidden="true"></i>
-			</a>
+            <a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+              <img src="assets/svgs/file-solid-full.svg" class="fa-svg" aria-hidden="true">
+            </a>
 
-			<a class="icon-link" href="#header" aria-label="Back to top">
-				<i class="fas fa-arrow-up" aria-hidden="true"></i>
-			</a>
-		</nav>
+            <a class="icon-link" href="#header" aria-label="Back to top">
+              <img src="assets/svgs/up-long-solid-full.svg" class="fa-svg" aria-hidden="true">
+            </a> 
+        </nav>
 
       </div>
     </div>
