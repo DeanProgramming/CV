@@ -221,18 +221,19 @@
               rel="noopener noreferrer"
               class="card-media"
             >
-            <video
-              src="images/ExpenseTrackerMP4.mp4"
-              autoplay
-              loop
-              muted
-              playsinline
-              loading="lazy"
-              style="width: 100%; object-fit: cover;"
-            >
+            <video 
+                data-src="images/ExpenseTrackerMP4.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="none"
+                class="lazy-video"
+                style="width: 100%; object-fit: cover;"
+              >
                 Your browser does not support the video tag.
               </video>
-            </a>
+            </a> 
 
               <div class="card-body">
                 <h3>Expense Tracker</h3>
