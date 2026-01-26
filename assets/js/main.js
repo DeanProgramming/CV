@@ -30,6 +30,7 @@
     const n = parseInt(v, 10);
     return Number.isFinite(n) ? n : 90;
   }
+  
 
   /* -------------------- Collapsibles -------------------- */
   function initCollapsibles() {
@@ -91,6 +92,38 @@
         }
       });
     });
+  }
+
+  function initLazyVideos() {
+    const videos = document.querySelectorAll("video[data-src]");
+    console.log("lazy videos found:", videos.length, videos);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const video = entry.target;
+
+          console.log("loading video:", video.dataset.src);
+
+          if (!video.getAttribute("src")) {
+            video.setAttribute("src", video.dataset.src);
+            video.load();
+          }
+
+          video.muted = true;
+          video.playsInline = true;
+
+          video.play().catch((err) => console.warn("play blocked:", err));
+
+          observer.unobserve(video);
+        });
+      },
+      { rootMargin: "200px 0px", threshold: 0.01 }
+    );
+
+    videos.forEach((v) => observer.observe(v));
   }
 
   /* -------------------- Progress bar -------------------- */
@@ -240,5 +273,6 @@
     initSectionSpy();
     initSmoothAnchors();
     initScrollLoop();
+    initLazyVideos();
   });
 })();
