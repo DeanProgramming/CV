@@ -95,7 +95,7 @@
   }
 
   function initLazyVideos() {
-    const videos = document.querySelectorAll("video[data-src]");
+    const videos = document.querySelectorAll("video.lazy-video");
     console.log("lazy videos found:", videos.length, videos);
 
     const observer = new IntersectionObserver(
@@ -104,19 +104,17 @@
           if (!entry.isIntersecting) return;
 
           const video = entry.target;
+          const source = video.querySelector("source[data-src]");
 
-          console.log("loading video:", video.dataset.src);
-
-          if (!video.getAttribute("src")) {
-            video.setAttribute("src", video.dataset.src);
+          if (source && !source.src) {
+            source.src = source.dataset.src;
             video.load();
           }
-
+          
           video.muted = true;
           video.playsInline = true;
 
           video.play().catch((err) => console.warn("play blocked:", err));
-
           observer.unobserve(video);
         });
       },
