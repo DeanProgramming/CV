@@ -131,7 +131,6 @@
  
           if (source && !source.src) {
             source.src = source.dataset.src;
-            video.load();
           }
  
           const tryPlay = () => video.play().catch(() => {});
