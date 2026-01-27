@@ -96,32 +96,34 @@
 
   function initLazyVideos() {
     const videos = document.querySelectorAll("video.lazy-video");
-    console.log("lazy videos found:", videos.length, videos);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-          const video = entry.target;
-          const source = video.querySelector("source[data-src]");
+        const video = entry.target;
+        const source = video.querySelector("source[data-src]");
 
-          if (source && !source.src) {
-            source.src = source.dataset.src;
-            video.load();
-          }
-          
-          video.muted = true;
-          video.playsInline = true;
+        // Lazy load poster
+        if (video.dataset.poster) {
+          video.poster = video.dataset.poster;
+        }
 
-          video.play().catch((err) => console.warn("play blocked:", err));
-          observer.unobserve(video);
-        });
-      },
-      { rootMargin: "200px 0px", threshold: 0.01 }
-    );
+        // Lazy load video source
+        if (source && !source.src) {
+          source.src = source.dataset.src;
+          video.load();
+        }
 
-    videos.forEach((v) => observer.observe(v));
+        video.play().catch(() => {});
+        observer.unobserve(video);
+      });
+    }, {
+      rootMargin: "200px 0px",
+      threshold: 0.01
+    });
+
+    videos.forEach(v => observer.observe(v));
   }
 
   /* -------------------- Progress bar -------------------- */
