@@ -106,7 +106,7 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 6px;
   width: 0%;
   background: rgba(0, 0, 0, 0.65);
   z-index: 10000;

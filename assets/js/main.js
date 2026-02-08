@@ -94,73 +94,94 @@
     });
   }
 
-  function initLazyVideos({
-    posterRootMargin = "800px 0px",
-    videoRootMargin = "200px 0px",
-    threshold = 0.25,
-    readyEvent = "loadeddata", 
-  } = {}) {
-    const videos = document.querySelectorAll("video.lazy-video");
-    if (!videos.length) return;
+function initLazyImages({
+  rootMargin = "800px 0px",
+  threshold = 0.01,
+} = {}) {
+  const imgs = document.querySelectorAll("img.lazy-img[data-src]");
+  if (!imgs.length) return;
 
-    // Stage A: preload poster when near viewport
-    const posterObserver = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
 
-        const video = entry.target;
-        if (video.dataset.poster && !video.poster) {
-          video.poster = video.dataset.poster;
-        }
-        posterObserver.unobserve(video);
+      const img = entry.target;
+      const realSrc = img.dataset.src;
+
+      if (realSrc && img.src !== realSrc) {
+        img.src = realSrc;
       }
-    }, { rootMargin: posterRootMargin, threshold: 0.01 });
 
-    // Stage B: load+play when in view
-    const videoObserver = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-
-        const video = entry.target;
-
-        video.muted = true;
-        video.playsInline = true;
-
-        if (video.dataset.poster && !video.poster) {
-          video.poster = video.dataset.poster;
-        }
-
-        // Attach source if needed
-        const source = video.querySelector("source[data-src]");
-        if (source && !source.src) {
-          source.src = source.dataset.src;
-
-          video.load();
-        }
-
-        const playWhenReady = () => {
-          video.play().catch(() => {
-            
-          });
-        };
-
-        if (video.readyState >= 2) {
-          playWhenReady();
-        } else {
-          video.addEventListener(readyEvent, playWhenReady, { once: true });
-        }
-
-        videoObserver.unobserve(video);
-      }
-    }, { rootMargin: videoRootMargin, threshold });
-
-    for (const v of videos) {
-      v.preload = "none";
-
-      posterObserver.observe(v);
-      videoObserver.observe(v);
+      io.unobserve(img);
     }
-  } 
+  }, { rootMargin, threshold });
+
+  imgs.forEach(img => io.observe(img));
+}
+
+
+function initLazyVideos({
+  posterRootMargin = "800px 0px",
+  videoRootMargin = "200px 0px",
+  threshold = 0.25,
+  readyEvent = "loadeddata",
+} = {}) {
+  const videos = document.querySelectorAll("video.lazy-video");
+  if (!videos.length) return;
+
+  const posterObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+
+      const video = entry.target;
+
+      if (video.dataset.poster && video.poster !== video.dataset.poster) {
+        video.poster = video.dataset.poster;
+      }
+
+      posterObserver.unobserve(video);
+    }
+  }, { rootMargin: posterRootMargin, threshold: 0.01 });
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+
+      const video = entry.target;
+
+      video.muted = true;
+      video.playsInline = true;
+
+      if (video.dataset.poster && video.poster !== video.dataset.poster) {
+        video.poster = video.dataset.poster;
+      }
+
+      const source = video.querySelector("source[data-src]");
+      if (source && !source.src) {
+        source.src = source.dataset.src;
+        video.load();
+      }
+
+      const playWhenReady = () => {
+        video.play().catch(() => {});
+      };
+
+      if (video.readyState >= 2) {
+        playWhenReady();
+      } else {
+        video.addEventListener(readyEvent, playWhenReady, { once: true });
+      }
+
+      videoObserver.unobserve(video);
+    }
+  }, { rootMargin: videoRootMargin, threshold });
+
+  for (const v of videos) {
+    v.preload = "none";
+    posterObserver.observe(v);
+    videoObserver.observe(v);
+  }
+}
   
   /* -------------------- Progress bar -------------------- */
   function updateProgressBar() {
@@ -309,6 +330,7 @@
     initSectionSpy();
     initSmoothAnchors();
     initScrollLoop();
+    initLazyImages();
     initLazyVideos({ readyEvent: "canplay" });
   });
 })();

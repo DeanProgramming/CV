@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Dean Holland — Portfolio" />
+
     <title>Dean Holland Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preload" href="assets/fonts/sourcesanpro-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/sourcesanpro-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/sourcesanpro-900.woff2" as="font" type="font/woff2" crossorigin />
+ 
+    <link rel="preload" as="image" href="posters/StandinPosterWEBP.webp" type="image/webp" fetchpriority="high" /> 
+
+    <link rel="preload" as="image" href="images/HighlightGamesWEBP.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/DistinctiveGamesWEBP.webp" type="image/webp" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="assets/HomeIcon.ico" type="image/x-icon" />
   </head>
-
-  <meta name="description" content="Dean Holland — Portfolio" />
-
-  <link rel="preload" href="assets/fonts/sourcesanpro-300.woff2" as="font" type="font/woff2" crossorigin> 
-  <link rel="preload" href="assets/fonts/sourcesanpro-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/sourcesanpro-900.woff2" as="font" type="font/woff2" crossorigin> 
-  <link rel="stylesheet" href="assets/css/main.css" />
-
-  <link rel="icon" href="assets/HomeIcon.ico" type="image/x-icon">
 
   <body class="homepage">
     <div id="scroll-progress" aria-hidden="true"></div>
@@ -156,7 +159,7 @@
                 rel="noopener noreferrer"
                 class="card-media"
               >
-                <img src="images/DistinctiveGamesWEBP.webp" loading="lazy" alt="Distinctive Games website preview" />
+                <img src="images/DistinctiveGamesWEBP.webp" alt="Distinctive Games website preview" />
               </a>
 
               <div class="card-body">
@@ -223,7 +226,8 @@
               rel="noopener noreferrer"
               class="card-media"
             >
-            <video  
+            <video   
+                poster="posters/StandinPosterWEBP.webp"
                 data-poster="posters/ExpenseTrackerPosterWEBP.webp"
                 autoplay
                 loop
@@ -305,6 +309,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/EmployeeManagementSystemPosterWEBP.webp" 
                   autoplay
                   loop
@@ -380,6 +385,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/LibrarySystemPosterWEBP.webp" 
                   autoplay
                   loop
@@ -451,6 +457,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/WeatherAppPosterWEBP.webp"
                   autoplay
                   loop
@@ -532,6 +539,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/ToDoAppPosterWEBP.webp"
                   autoplay
                   loop
@@ -602,6 +610,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/VUEToDoAppPosterWEBP.webp"
                   autoplay
                   loop
@@ -669,6 +678,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/EarthandMoonPosterWEBP.webp"
                   autoplay
                   loop
@@ -733,6 +743,7 @@
                 class="card-media"
               >
                 <video 
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/GenericShopPosterWEBP.webp"
                   autoplay
                   loop
@@ -803,6 +814,7 @@
                 class="card-media"
               >
                 <video             
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/TrackingGamePosterWEBP.webp"
                   autoplay
                   loop
@@ -870,11 +882,16 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="card-media"
-                loading="lazy"
               >
-                <img src="images/ProjectOutbreakWEBP.webp" loading="lazy" alt="Project Outbreak preview" />
-              </a>
-
+                <img
+                  src="posters/StandinPosterWEBP.webp"
+                  data-src="images/ProjectOutbreakWEBP.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Project Outbreak preview"
+                  class="lazy-img"
+                />
+              </a> 
               <div class="card-body">
                 <h3>Project Outbreak — Co-Owner, AI Lead</h3>
                 <p class="muted">Unity, C#</p>
@@ -928,11 +945,16 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="card-media"
-                loading="lazy"
-              > 
-                <img src="images/BindNBanishWEBP.webp" loading="lazy" alt="Bind and Banish logo" />
+              >
+                <img
+                  src="posters/StandinPosterWEBP.webp"
+                  data-src="images/BindNBanishWEBP.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Bind and Banish logo"
+                  class="lazy-img"
+                />
               </a>
-
               <div class="card-body">
                 <h3>Bind and Banish</h3>
                 <p class="muted">Unity, C#</p>
@@ -988,6 +1010,7 @@
                 class="card-media"
               >
                 <video            
+                  poster="posters/StandinPosterWEBP.webp"
                   data-poster="posters/CombinedSearchForAStarPosterWEBP.webp"
                   autoplay
                   loop
