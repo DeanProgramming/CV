@@ -735,3 +735,42 @@ button.toggle-button:hover {
   color: var(--muted);
   line-height: 1.45;
 }
+
+.featured-full .featured-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 1fr);
+  gap: 1.25rem;
+  padding: 1rem;
+  align-items: stretch;
+}
+
+.featured-full .featured-video-wrap {
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
+  align-self: start;
+}
+
+.featured-full .featured-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1190 / 952;
+  object-fit: contain;
+  background: #111;
+}
+
+@media (max-width: 980px) {
+  .featured-full .featured-split {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-full .featured-video-wrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .featured-full .featured-logo {
+    max-height: 180px;
+  }
+}

@@ -214,121 +214,171 @@
           </header>
 
         <div class="grid">
-          <!-- InTakeWise -->
-          <article class="card featured-full">
-            <div class="featured-split">
-              <a
-                href="https://intakewise.azurewebsites.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="featured-video-wrap"
+        <!-- InTakeWise -->
+        <article class="card featured-full">
+          <div class="featured-split">
+            <a
+              href="https://intakewise.azurewebsites.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="featured-video-wrap"
+            >
+              <video
+                poster="posters/StandinPosterWEBP.webp"
+                data-poster="posters/InTakeWisePosterWEBP.webp"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="none"
+                class="lazy-video featured-video"
               >
-                <video
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/InTakeWisePosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video featured-video"
-                >
-                  <source data-src="images/IntakeWiseMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
+                <source data-src="images/IntakeWiseMP4.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </a>
 
-              <div class="featured-right">
-                <div class="featured-logo-row">
+            <div class="featured-right">
+              <div class="featured-logo-row">
+                <a
+                  href="https://intakewise.azurewebsites.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="featured-logo-wrap"
+                >
+                  <img
+                    src="posters/StandinPosterWEBP.webp"
+                    data-src="images/InTakeWiseLogoWEBP.webp"
+                    loading="lazy"
+                    decoding="async"
+                    alt="InTakeWise logo"
+                    class="lazy-img featured-logo"
+                  />
+                </a>
+
+                <div class="featured-hosting-note">
+                  <strong>Live portfolio demo</strong>
+                  <p>
+                    No registration or password is required. Select
+                    <strong>Try the demo</strong> to explore fictional data in a
+                    protected, read-only environment. The free Azure hosting tier
+                    may take up to a minute to wake on the first visit.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-body featured-copy">
+                <h3 style="text-align: center;">
+                  InTakeWise &mdash; AI-Assisted Nutrition &amp; Fitness Platform
+                </h3>
+
+                <p style="text-align: center;" class="muted">
+                  .NET 9 &bull; ASP.NET Core MVC/Razor &bull; EF Core &bull;
+                  SQL Server &bull; ASP.NET Identity &bull; OpenAI &bull; xUnit
+                  &bull; GitHub Actions &bull; Azure
+                </p>
+
+                <div class="project-overview">
+                  <p>
+                    A full-stack nutrition and fitness platform that turns
+                    natural-language meal and workout entries, pantry data, and
+                    receipt photos into structured tracking information and
+                    personalised meal and shopping plans.
+                  </p>
+                </div>
+
+                <div class="collapsible" id="intakewise-details">
+                  <p>
+                    InTakeWise is my most complete end-to-end .NET project. It
+                    combines secure account and onboarding flows, user-isolated
+                    data, domain services, guarded OpenAI integrations, a responsive
+                    Razor interface, automated testing, and CI/CD deployment to Azure.
+                  </p>
+
+                  <p><strong>Engineering highlights:</strong></p>
+
+                  <ul>
+                    <li>
+                      <strong>Protected portfolio demo:</strong>
+                      One-click access to fictional seeded data, with read-only
+                      middleware blocking writes, account changes, profile changes,
+                      and live AI requests.
+                    </li>
+
+                    <li>
+                      <strong>Natural-language tracking:</strong>
+                      Meal and workout descriptions are converted into structured
+                      nutrition and activity estimates.
+                    </li>
+
+                    <li>
+                      <strong>Receipt-to-pantry workflow:</strong>
+                      Uploaded receipt photos are validated, analysed using OpenAI
+                      vision, presented for user review, and merged into compatible
+                      pantry quantities.
+                    </li>
+
+                    <li>
+                      <strong>Personalised planning:</strong>
+                      Separate gym-day and non-gym-day nutrition targets feed into
+                      pantry-aware meal and shopping plans for the remaining days of
+                      the current week.
+                    </li>
+
+                    <li>
+                      <strong>Guarded AI integrations:</strong>
+                      Strict JSON schemas, server-side response validation, per-user
+                      request limits, timeouts, cancellation, sanitised logging, and
+                      safe failure handling.
+                    </li>
+
+                    <li>
+                      <strong>Data integrity and isolation:</strong>
+                      User-scoped EF Core data with foreign keys, unique indexes,
+                      database constraints, and automated cross-user isolation tests.
+                    </li>
+
+                    <li>
+                      <strong>Automated delivery:</strong>
+                      55 xUnit test methods cover unit, integration, security, and
+                      complete user-journey scenarios. GitHub Actions builds and tests
+                      the application before deployment to Azure.
+                    </li>
+                  </ul>
+                </div>
+
+                <button
+                  class="toggle-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="intakewise-details"
+                >
+                  Show more
+                </button>
+
+                <div class="actions">
+                  <a
+                    href="https://github.com/DeanProgramming/InTakeWise"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                  >
+                    Source Code
+                  </a>
+
                   <a
                     href="https://intakewise.azurewebsites.net/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="featured-logo-wrap"
+                    class="button alt"
                   >
-                    <img
-                      src="posters/StandinPosterWEBP.webp"
-                      data-src="images/InTakeWiseLogoWEBP.webp"
-                      loading="lazy"
-                      decoding="async"
-                      alt="InTakeWise logo"
-                      class="lazy-img featured-logo"
-                    />
+                    Live Demo
                   </a>
-
-                  <div class="featured-hosting-note">
-                    <strong>Launch note</strong>
-                    <p>
-                      This project uses a free Azure hosting tier, so the first load after a cold start
-                      can take up to a minute.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card-body featured-copy">
-                  <h3 style="text-align: center;">InTakeWise</h3>
-                  <p style="text-align: center;" class="muted">
-                    ASP.NET Core MVC, SQL Server, EF Core, ASP.NET Identity, OpenAI, Razor, JavaScript, Deployed on Azure
-                  </p>
-
-                  <div class="project-overview">
-                    <p>
-                      A full-stack nutrition and fitness web app that brings together meal logging,
-                      workout tracking, pantry management, receipt photo analysis, and AI-generated
-                      shopping lists and meal planning into one seamless user flow.
-                    </p>
-                  </div>
-
-                  <div class="collapsible" id="intakewise-details">
-                    <p>
-                      InTakeWise is the strongest example of my end-to-end application development. It brings together
-                      authentication, profile setup, macro targets, date-aware logging, pantry tracking, and OpenAI-powered
-                      planning features in a structured ASP.NET Core MVC application.
-                    </p>
-
-                    <p><strong>Key features:</strong></p>
-                    <ul>
-                      <li>Secure authentication and user-specific data with ASP.NET Identity</li>
-                      <li>Natural-language meal logging with estimated calories and macros</li>
-                      <li>Natural-language workout logging with estimated calorie burn</li>
-                      <li>Receipt-to-pantry flow with photo-based receipt analysis and item extraction before saving into the pantry</li>
-                      <li>Pantry management with duplicate food merging and unit normalisation</li>
-                      <li>AI-generated shopping plans and daily meal suggestions based on user goals</li>
-                      <li>Profile wizard with gym-day targets for calories and macros</li>
-                    </ul>
-                  </div>
-
-                  <button
-                    class="toggle-button"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="intakewise-details"
-                  >
-                    Show more
-                  </button>
-
-                  <div class="actions">
-                    <a
-                      href="https://github.com/DeanProgramming/InTakeWise"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button alt"
-                    >
-                      Source Code
-                    </a>
-                    <a
-                      href="https://intakewise.azurewebsites.net/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button alt"
-                    >
-                      Live Project
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
+        </article>
         </div>
 
           <div class="grid">           
