@@ -2,52 +2,132 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="Dean Holland — Portfolio" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Dean Holland is a full-stack .NET developer building secure, user-focused ASP.NET Core products with C#, Razor, SQL Server, JavaScript, testing and Azure."
+    />
+    <meta name="theme-color" content="#d52349" />
+    <meta name="robots" content="index, follow" />
 
-    <title>Dean Holland Portfolio</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dean Holland | Full-Stack .NET Developer" />
+    <meta
+      property="og:description"
+      content="Commercial .NET experience and end-to-end ASP.NET Core projects, including InTakeWise."
+    />
+    <meta property="og:url" content="https://deanprogramming.github.io/CV/" />
+    <meta
+      property="og:image"
+      content="https://deanprogramming.github.io/CV/posters/InTakeWisePosterWEBP.webp"
+    />
 
-    <!-- Fonts -->
-    <link rel="preload" href="assets/fonts/sourcesanpro-300.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/sourcesanpro-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/sourcesanpro-900.woff2" as="font" type="font/woff2" crossorigin />
- 
-    <link rel="preload" as="image" href="posters/StandinPosterWEBP.webp" type="image/webp" fetchpriority="high" /> 
+    <link rel="canonical" href="https://deanprogramming.github.io/CV/" />
+    <title>Dean Holland | Full-Stack .NET Developer</title>
 
-    <link rel="preload" as="image" href="images/HighlightGamesWEBP.webp" type="image/webp" />
-    <link rel="preload" as="image" href="images/DistinctiveGamesWEBP.webp" type="image/webp" />
+    <link
+      rel="preload"
+      href="assets/fonts/sourcesanpro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sourcesanpro-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sourcesanpro-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="posters/InTakeWisePosterWEBP.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
 
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="assets/HomeIcon.ico" type="image/x-icon" />
   </head>
 
   <body class="homepage">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="scroll-progress" aria-hidden="true"></div>
 
-    <header id="header" class="site-header">
-      <div class="container">
-        <h1 class="site-title">
-          <a href="index.html" aria-label="Go to homepage">Dean Holland — Portfolio</a>
+    <header id="about" class="site-header">
+      <div class="container hero">
+        <p class="eyebrow">Software Engineer at Highlight Games</p>
+        <h1>
+          Dean Holland
+          <span>Full-Stack .NET Developer</span>
         </h1>
+
+        <p class="hero-summary">
+          I build responsive, data-driven interfaces in my commercial role and
+          ship complete ASP.NET Core applications independently—from secure
+          authentication and SQL-backed domain logic to automated tests, CI/CD
+          and Azure deployment.
+        </p>
+
+        <ul class="technology-list hero-technologies" aria-label="Core technologies">
+          <li>C#</li>
+          <li>.NET</li>
+          <li>ASP.NET Core</li>
+          <li>Razor</li>
+          <li>EF Core</li>
+          <li>SQL Server</li>
+          <li>JavaScript</li>
+          <li>Azure</li>
+        </ul>
 
         <nav class="site-nav" aria-label="Primary navigation">
           <ul>
             <li>
-              <a href="#flagship" data-spy="main">Flagship Project</a>
+              <a href="#flagship" data-spy="flagship">Featured Project</a>
             </li>
             <li>
-              <a href="#main" data-spy="">Professional Projects</a>
+              <a href="#experience" data-spy="experience">Experience</a>
             </li>
             <li>
-              <a href="#personal-projects" data-spy="personal-projects">Personal Projects</a>
+              <a href="#projects" data-spy="projects">Projects</a>
             </li>
             <li>
-              <a style="min-width: 60px;"
+              <a
                 href="Dean_Holland_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                >CV</a
               >
+                CV
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/DeanProgramming"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Profile
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/dean-holland/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
             </li>
           </ul>
         </nav>
@@ -56,27 +136,35 @@
 
     <div id="compact-nav" aria-label="Compact navigation">
       <div class="container compact-inner">
-        <a class="brand" href="#header">Dean Holland</a>
+        <a class="brand" href="#about">Dean Holland</a>
 
         <nav class="compact-links" aria-label="Compact navigation links">
-          <a href="#flagship" data-spy="flagship">Flagship Project</a>
-          <a href="#main" data-spy="main">Professional</a>
-          <a href="#personal-projects" data-spy="personal-projects">Personal</a>
-          <a href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="#flagship" data-spy="flagship">Featured</a>
+          <a href="#experience" data-spy="experience">Experience</a>
+          <a href="#projects" data-spy="projects">Projects</a>
+          <a
+            href="Dean_Holland_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
         </nav>
       </div>
     </div>
 
-    <main id="page-wrapper">
-      <!--Flag ship project-->
-      <section id="flagship" class="section">
+    <main id="main-content">
+      <section id="flagship" class="section" aria-labelledby="flagship-heading">
         <div class="container">
           <header class="major">
-            <h2>Main Project</h2>
+            <p class="eyebrow">Featured case study</p>
+            <h2 id="flagship-heading">InTakeWise</h2>
+            <p>
+              The clearest example of how I design, build, secure, test and
+              deploy a complete product.
+            </p>
           </header>
 
-          <div class="grid">
-          <!-- InTakeWise -->
           <article class="card featured-full">
             <div class="featured-split">
               <a
@@ -84,11 +172,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="featured-video-wrap"
+                aria-label="Open the live InTakeWise demo"
               >
                 <video
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/InTakeWisePosterWEBP.webp"
-                  autoplay
+                  poster="posters/InTakeWisePosterWEBP.webp"
                   loop
                   muted
                   playsinline
@@ -96,115 +183,98 @@
                   class="lazy-video featured-video"
                 >
                   <source data-src="images/IntakeWiseMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
+                <span class="media-cta">Open live demo</span>
               </a>
 
               <div class="featured-right">
-                <div class="featured-logo-row">
-                  <a
-                    href="https://intakewise.azurewebsites.net/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="featured-logo-wrap"
-                  >
-                    <img
-                      src="posters/StandinPosterWEBP.webp"
-                      data-src="images/InTakeWiseLogoWEBP.webp"
-                      loading="lazy"
-                      decoding="async"
-                      alt="InTakeWise logo"
-                      class="lazy-img featured-logo"
-                    />
-                  </a>
-
-                  <div class="featured-hosting-note">
-                    <strong>Live portfolio demo</strong>
-                    <p>
-                      No registration or password is required. Select
-                      <strong>Try the demo</strong> to explore fictional data in a
-                      protected, read-only environment. The free Azure hosting tier
-                      may take up to a minute to wake on the first visit.
-                    </p>
-                  </div>
+                <div class="project-heading">
+                  <span class="project-badge">Flagship personal project</span>
+                  <img
+                    src="images/InTakeWiseLogoWEBP.webp"
+                    alt="InTakeWise"
+                    class="featured-logo"
+                    width="960"
+                    height="280"
+                    decoding="async"
+                  />
                 </div>
 
                 <div class="card-body featured-copy">
-                  <h3 style="text-align: center;">
-                    InTakeWise &mdash; AI-Assisted Nutrition &amp; Fitness Platform
-                  </h3>
+                  <h3>AI-assisted nutrition and fitness platform</h3>
 
-                  <p style="text-align: center;" class="muted">
-                    .NET 9 &bull; ASP.NET Core MVC/Razor &bull; EF Core &bull;
-                    SQL Server &bull; ASP.NET Identity &bull; OpenAI &bull; xUnit
-                    &bull; GitHub Actions &bull; Azure
+                  <ul class="technology-list" aria-label="InTakeWise technologies">
+                    <li>.NET 9</li>
+                    <li>ASP.NET Core MVC</li>
+                    <li>EF Core</li>
+                    <li>SQL Server</li>
+                    <li>Identity</li>
+                    <li>OpenAI</li>
+                    <li>xUnit</li>
+                    <li>Azure</li>
+                  </ul>
+
+                  <p class="featured-lead">
+                    Turns natural-language meal and workout entries, pantry data
+                    and receipt photos into structured tracking information and
+                    personalised meal and shopping plans.
                   </p>
 
-                  <div class="project-overview">
-                    <p>
-                      A full-stack nutrition and fitness platform that turns
-                      natural-language meal and workout entries, pantry data, and
-                      receipt photos into structured tracking information and
-                      personalised meal and shopping plans.
-                    </p>
-                  </div>
+                  <dl class="proof-grid" aria-label="Project evidence">
+                    <div>
+                      <dt>55</dt>
+                      <dd>automated tests</dd>
+                    </div>
+                    <div>
+                      <dt>Read-only</dt>
+                      <dd>recruiter demo</dd>
+                    </div>
+                    <div>
+                      <dt>CI/CD</dt>
+                      <dd>GitHub Actions</dd>
+                    </div>
+                    <div>
+                      <dt>Azure</dt>
+                      <dd>live deployment</dd>
+                    </div>
+                  </dl>
+
+                  <aside class="launch-note">
+                    <strong>Explore without registering.</strong>
+                    Select <em>Try the demo</em> to open fictional seeded data.
+                    The Azure app may take up to a minute to wake on the first visit.
+                  </aside>
 
                   <div class="collapsible" id="intakewise-details">
                     <p>
-                      InTakeWise is my most complete end-to-end .NET project. It
-                      combines secure account and onboarding flows, user-isolated
-                      data, domain services, guarded OpenAI integrations, a responsive
-                      Razor interface, automated testing, and CI/CD deployment to Azure.
+                      The engineering focus is reliability around user data and
+                      AI-assisted workflows, not just calling an API.
                     </p>
-
-                    <p><strong>Engineering highlights:</strong></p>
-
-                    <ul>
+                    <ul class="key-points">
                       <li>
-                        <strong>Protected portfolio demo:</strong>
-                        One-click access to fictional seeded data, with read-only
-                        middleware blocking writes, account changes, profile changes,
-                        and live AI requests.
+                        <strong>Secure user boundaries:</strong> ASP.NET Identity,
+                        user-scoped EF Core queries, database constraints and
+                        automated cross-user isolation tests.
                       </li>
-
                       <li>
-                        <strong>Natural-language tracking:</strong>
-                        Meal and workout descriptions are converted into structured
-                        nutrition and activity estimates.
+                        <strong>Guarded AI:</strong> strict JSON schemas,
+                        server-side domain validation, per-user quotas, timeouts,
+                        cancellation and sanitised logging.
                       </li>
-
                       <li>
-                        <strong>Receipt-to-pantry workflow:</strong>
-                        Uploaded receipt photos are validated, analysed using OpenAI
-                        vision, presented for user review, and merged into compatible
-                        pantry quantities.
+                        <strong>Receipt-to-pantry flow:</strong> validates uploaded
+                        images, extracts groceries, lets users review the result
+                        and transactionally merges compatible quantities.
                       </li>
-
                       <li>
-                        <strong>Personalised planning:</strong>
-                        Separate gym-day and non-gym-day nutrition targets feed into
-                        pantry-aware meal and shopping plans for the remaining days of
-                        the current week.
+                        <strong>Production-minded demo:</strong> passwordless
+                        access to fictional data with middleware blocking writes,
+                        account changes and live AI calls.
                       </li>
-
                       <li>
-                        <strong>Guarded AI integrations:</strong>
-                        Strict JSON schemas, server-side response validation, per-user
-                        request limits, timeouts, cancellation, sanitised logging, and
-                        safe failure handling.
-                      </li>
-
-                      <li>
-                        <strong>Data integrity and isolation:</strong>
-                        User-scoped EF Core data with foreign keys, unique indexes,
-                        database constraints, and automated cross-user isolation tests.
-                      </li>
-
-                      <li>
-                        <strong>Automated delivery:</strong>
-                        55 xUnit test methods cover unit, integration, security, and
-                        complete user-journey scenarios. GitHub Actions builds and tests
-                        the application before deployment to Azure.
+                        <strong>Automated delivery:</strong> unit, integration,
+                        security and complete user-journey tests run before Azure
+                        deployment.
                       </li>
                     </ul>
                   </div>
@@ -214,107 +284,105 @@
                     type="button"
                     aria-expanded="false"
                     aria-controls="intakewise-details"
+                    data-collapsed-label="View engineering details"
+                    data-expanded-label="Hide engineering details"
                   >
-                    Show more
+                    View engineering details
                   </button>
 
-                  <div class="actions">
+                  <div class="actions featured-actions">
+                    <a
+                      href="https://intakewise.azurewebsites.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button"
+                    >
+                      Try live demo
+                    </a>
                     <a
                       href="https://github.com/DeanProgramming/InTakeWise"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="button alt"
                     >
-                      Source Code
-                    </a>
-
-                    <a
-                      href="https://intakewise.azurewebsites.net/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button alt"
-                    >
-                      Live Demo
+                      View source
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </article>
-          </div>
         </div>
       </section>
 
-      <!-- MAIN -->
-      <section id="main" class="section section-alt"> 
+      <section
+        id="experience"
+        class="section section-alt"
+        aria-labelledby="experience-heading"
+      >
         <div class="container">
           <header class="major">
-            <h2>Professional Projects</h2>
+            <p class="eyebrow">Commercial experience</p>
+            <h2 id="experience-heading">Professional Experience</h2>
+            <p>
+              Production work across web development and Unity/C#, with a
+              current focus on .NET interfaces and data-driven products.
+            </p>
           </header>
 
-          <div class="grid">
-            <!-- Highlight Games -->
-            <article class="card">
+          <div class="grid experience-grid">
+            <article class="card experience-card">
               <a
                 href="https://highlight-games.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="card-media"
-              > 
-                <img src="images/HighlightGamesWEBP.webp" alt="Highlight Games website preview" />
+                class="company-media"
+                aria-label="Visit the Highlight Games website"
+              >
+                <img
+                  src="images/HighlightGamesWEBP.webp"
+                  alt="Highlight Games"
+                  width="960"
+                  height="300"
+                  decoding="async"
+                />
               </a>
 
               <div class="card-body">
-                <h3>Software Engineer (.NET, Razor Pages, CSS)</h3>
-                <p class="muted">Highlight Games</p>
-
-                <div class="project-overview">
-                  <p>
-                    Frontend-focused engineer on a virtual sports betting platform, building
-                    reusable Razor UI components and translating JSON-driven data into clean,
-                    client-accurate interfaces.
-                  </p>
+                <div class="role-heading">
+                  <div>
+                    <p class="project-badge">Current role</p>
+                    <h3>Software Engineer</h3>
+                    <p class="company-name">Highlight Games</p>
+                  </div>                
+                  <ul class="technology-list" aria-label="Highlight Games">
+                    <li>.NET</li>
+                    <li>C#</li>
+                    <li>Razor</li>
+                    <li>CSS</li> 
+                  </ul> 
                 </div>
 
-                <div class="collapsible" id="hg-details">
-                  <p>
-                    As a Software Engineer at Highlight Games, I focus primarily on frontend
-                    development for a virtual sports betting platform. I build dynamic,
-                    data-driven user interfaces that closely align with client expectations,
-                    combining strong attention to detail with scalable and maintainable implementation.
-                  </p>
+                <p class="project-overview">
+                  Build reusable, responsive UI for a virtual sports platform,
+                  turning JSON-driven data and client requirements into
+                  maintainable Razor interfaces.
+                </p>
 
-                  <p><strong>Key Contributions and Responsibilities:</strong></p>
-                  <ul>
-                    <li>
-                      <strong>Frontend Development & Dynamic Components:</strong> Reusable, dynamic
-                      UI components using .NET and Razor Pages.
-                    </li>
-                    <li>
-                      <strong>Data Integration & Display:</strong> Work with JSON responses and
-                      transform fields into clear UI displays.
-                    </li>
-                    <li>
-                      <strong>Detail-Oriented UI Implementation:</strong> Pixel-accurate, responsive
-                      recreation of client layouts.
-                    </li>
-                    <li>
-                      <strong>Advanced CSS & Theming:</strong> CSS variables powering a flexible theming engine.
-                    </li>
-                    <li>
-                      <strong>Collaborative Workflow:</strong> PR workflow in Bitbucket, code reviews, and PM collaboration.
-                    </li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="hg-details"
-                >
-                  Show more
-                </button>
+                <ul class="key-points">
+                  <li>
+                    Develop reusable .NET and Razor Pages components for
+                    data-driven product variations.
+                  </li>
+                  <li>
+                    Translate client layouts into accurate responsive interfaces
+                    and flexible CSS-variable theming.
+                  </li>
+                  <li>
+                    Work through Bitbucket pull requests, code review, stand-ups
+                    and cross-functional product collaboration.
+                  </li>
+                </ul>
 
                 <div class="actions">
                   <a
@@ -322,56 +390,64 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Go to Website</a
                   >
+                    Company website
+                  </a>
                 </div>
               </div>
             </article>
 
-            <!-- Distinctive Games -->
-            <article class="card">
+            <article class="card experience-card">
               <a
                 href="https://www.distinctivegames.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="card-media"
+                class="company-media"
+                aria-label="Visit the Distinctive Games website"
               >
-                <img src="images/DistinctiveGamesWEBP.webp" alt="Distinctive Games website preview" />
+                <img
+                  src="images/DistinctiveGamesWEBP.webp"
+                  alt="Distinctive Games"
+                  width="960"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
 
               <div class="card-body">
-                <h3>Unity C# Developer</h3>
-                <p class="muted">Distinctive Games</p>
-
-                <div class="project-overview">
-                  <p>
-                    Unity/C# developer contributing across multiple game projects in a hybrid team
-                    environment. Delivered features through stand-ups and iteration.
-                  </p>
+                <div class="role-heading">
+                  <div>
+                    <p class="project-badge neutral">Previous role</p>
+                    <h3>Graduate Programmer</h3>
+                    <p class="company-name">Distinctive Games</p>
+                  </div>
+                  <ul class="technology-list" aria-label="Distinctive Games"> 
+                    <li>C#</li>
+                    <li>Unity</li> 
+                  </ul> 
                 </div>
 
-                <div class="collapsible" id="dg-details">
-                  <p>
-                    As a Graduate Programmer, I contributed to multiple projects using C# and Unity,
-                    collaborating in a hybrid environment and regularly delivering features through stand-ups.
-                  </p>
+                <p class="project-overview">
+                  Contributed C# features across multiple Unity game projects,
+                  adapting to different codebases and delivering within a
+                  collaborative hybrid team.
+                </p>
 
-                  <p><strong>Highlights:</strong></p>
-                  <ul>
-                    <li>Hands-on coding and problem-solving across varied projects</li>
-                    <li>Comfortable switching between remote and in-office collaboration</li>
-                    <li>Proactive about taking on new challenges and iterating quickly</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dg-details"
-                >
-                  Show more
-                </button>
+                <ul class="key-points">
+                  <li>
+                    Implemented and iterated gameplay features across varied
+                    Unity projects.
+                  </li>
+                  <li>
+                    Diagnosed problems in established codebases and responded to
+                    team feedback.
+                  </li>
+                  <li>
+                    Delivered work through regular stand-ups and shared
+                    development workflows.
+                  </li>
+                </ul>
 
                 <div class="actions">
                   <a
@@ -379,168 +455,220 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Go to Website</a
                   >
+                    Company website
+                  </a>
                 </div>
               </div>
             </article>
           </div>
         </div>
       </section>
- 
-      <section id="personal-projects" class="section section-alt">
-        <div class="container">
+
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <div class="container projects-container">
           <header class="major">
-            <h2>Personal Projects</h2>
+            <p class="eyebrow">Selected personal work</p>
+            <h2 id="projects-heading">More Full-Stack Projects</h2>
+            <p>
+              A focused selection showing authentication, relational data,
+              external APIs, business workflows, testing and interactive UI.
+            </p>
           </header>
-          <div class="grid">           
-            <!-- Expense Tracker -->
-            <article class="card">
-            <a
-              href="https://expensetracker-deanh.azurewebsites.net/Expenses"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="card-media"
-            >
-            <video   
-                poster="posters/StandinPosterWEBP.webp"
-                data-poster="posters/ExpenseTrackerPosterWEBP.webp"
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="none"
-                class="lazy-video"
-                style="width: 100%; object-fit: cover;"
-              > 
-              <source data-src="images/ExpenseTrackerMP4.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </a> 
 
-              <div class="card-body"> 
-
-                <div class="featured-hosting-note">
-                  <p>
-                  This project uses a free Azure hosting tier, so the first load after a cold start
-                  can take up to a minute.
-                  </p>
-                </div>
-
-
-                <h3>Expense Tracker</h3>
-                <p class="muted">
-                  .NET 9, ASP.NET MVC (Razor), SQL Server, EF Core, ASP.NET Identity, JS, Chart.js, Azure
-                </p>
-
-                <div class="project-overview">
-                  <p>
-                    Full-stack expense tracking app with secure accounts, CRUD transactions, and a
-                    live-updating chart dashboard deployed to Azure.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="expense-details">
-                  <p>
-                    Expense Tracker is a full-stack web application built with .NET 9.0 and ASP.NET MVC,
-                    designed to help users record and manage spending. The dashboard provides a monthly
-                    breakdown using Chart.js and updates dynamically without full-page refresh.
-                  </p>
-
-                  <p><strong>Key features:</strong></p>
-                  <ul>
-                    <li>Secure authentication with ASP.NET Identity</li>
-                    <li>Full CRUD for expenses with validation</li>
-                    <li>Monthly charts + average category chart (Chart.js)</li>
-                    <li>Dynamic UI updates for fast UX</li>
-                    <li>Optional demo data regeneration logic</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="expense-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/ExpenseTracker"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://expensetracker-deanh.azurewebsites.net/Expenses"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Live on Azure</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Employee Performance Management System -->
-            <article class="card"> 
+          <div class="grid project-grid">
+            <article class="card project-card">
               <a
-                href="Dean H - Employee Performance Management System Design Document.pdf"
+                href="https://expensetracker-deanh.azurewebsites.net/Expenses"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="card-media"
+                aria-label="Open the live Expense Tracker"
               >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/EmployeeManagementSystemPosterWEBP.webp" 
-                  autoplay
+                <video
+                  poster="posters/ExpenseTrackerPosterWEBP.webp"
                   loop
                   muted
                   playsinline
                   preload="none"
                   class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
                 >
-                  <source data-src="images/EmployeeManagementSystemMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  <source data-src="images/ExpenseTrackerMP4.mp4" type="video/mp4" />
                 </video>
+                <span class="media-cta">Open live app</span>
               </a>
 
               <div class="card-body">
-                <h3>Employee Performance Management System</h3>
-                <p class="muted">ASP.NET, Razor, SQL Server, T-SQL, EF Core, JavaScript</p>
+                <p class="project-badge">Live full-stack app</p>
+                <h3>Expense Tracker</h3>
+                <ul class="technology-list" aria-label="Expense Tracker technologies">
+                  <li>.NET 9</li>
+                  <li>MVC</li>
+                  <li>EF Core</li>
+                  <li>SQL Server</li>
+                  <li>Identity</li>
+                  <li>Chart.js</li>
+                </ul>
 
-                <div class="project-overview">
-                  <p>
-                    HR-focused system for employee records and performance reviews with dashboards
-                    and clear visualisation. Supports employee/admin views and performance history.
-                  </p>
+                <p class="project-overview">
+                  Secure expense management with user accounts, validated CRUD
+                  workflows and monthly spending dashboards.
+                </p>
+
+                <ul class="key-points">
+                  <li>Expenses are persisted against authenticated accounts.</li>
+                  <li>
+                    Charts update after create, edit and delete actions without a
+                    full-page reload.
+                  </li>
+                  <li>Deployed to Azure with optional seeded demo data.</li>
+                </ul>
+
+                <div class="actions">
+                  <a
+                    href="https://expensetracker-deanh.azurewebsites.net/Expenses"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button"
+                  >
+                    Live app
+                  </a>
+                  <a
+                    href="https://github.com/DeanProgramming/ExpenseTracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                  >
+                    Source
+                  </a>
                 </div>
+                <p class="cold-start-note">
+                  Azure may take up to a minute to wake on first load.
+                </p>
+              </div>
+            </article>
 
-                <div class="collapsible" id="emp-details">
-                  <p>
-                    ASP.NET Core MVC application to manage employee records and performance evaluations.
-                    Uses SQL Server + EF Core and presents trends with graphs for both teams and individuals.
-                  </p>
-                  <ul>
-                    <li>Employee records management (CRUD)</li>
-                    <li>Performance reviews + history</li>
-                    <li>Visual dashboards (bar + line graphs)</li>
-                    <li>Admin and employee views</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="emp-details"
+            <article class="card project-card">
+              <a
+                href="https://weatherapp-deanholland.azurewebsites.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+                aria-label="Open the live Weather and Map app"
+              >
+                <video
+                  poster="posters/WeatherAppPosterWEBP.webp"
+                  loop
+                  muted
+                  playsinline
+                  preload="none"
+                  class="lazy-video"
                 >
-                  Show more
-                </button>
+                  <source data-src="images/WeatherAppMP4.mp4" type="video/mp4" />
+                </video>
+                <span class="media-cta">Open live app</span>
+              </a>
+
+              <div class="card-body">
+                <p class="project-badge neutral">External API integration</p>
+                <h3>Live Weather &amp; Map</h3>
+                <ul class="technology-list" aria-label="Weather app technologies">
+                  <li>.NET 6</li>
+                  <li>ASP.NET MVC</li>
+                  <li>REST APIs</li>
+                  <li>JavaScript</li>
+                  <li>Unit tests</li>
+                </ul>
+
+                <p class="project-overview">
+                  Combines live weather, multi-day forecast analysis and
+                  interactive mapping in one ASP.NET MVC application.
+                </p>
+
+                <ul class="key-points">
+                  <li>Integrates OpenWeatherMap and OpenStreetMap data.</li>
+                  <li>
+                    Aggregates forecast readings into daily averages, highs and lows.
+                  </li>
+                  <li>Includes ten unit tests around application logic.</li>
+                </ul>
+
+                <div class="actions">
+                  <a
+                    href="https://weatherapp-deanholland.azurewebsites.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button"
+                  >
+                    Live app
+                  </a>
+                  <a
+                    href="https://github.com/DeanProgramming/WeatherApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button alt"
+                  >
+                    Source
+                  </a>
+                  <a
+                    href="Live Weather and Map Application Design Doc.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                  >
+                    Design document
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <a
+                href="Dean H - Employee Performance Management System Design Document.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-media"
+                aria-label="Open the Employee Performance Management System design document"
+              >
+                <video
+                  poster="posters/EmployeeManagementSystemPosterWEBP.webp"
+                  loop
+                  muted
+                  playsinline
+                  preload="none"
+                  class="lazy-video"
+                >
+                  <source
+                    data-src="images/EmployeeManagementSystemMP4.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <span class="media-cta">View design document</span>
+              </a>
+
+              <div class="card-body">
+                <p class="project-badge neutral">Data &amp; business workflows</p>
+                <h3>Employee Performance System</h3>
+                <ul class="technology-list" aria-label="Employee system technologies">
+                  <li>.NET 6</li>
+                  <li>ASP.NET MVC</li>
+                  <li>EF Core</li>
+                  <li>SQL Server</li>
+                  <li>T-SQL</li>
+                </ul>
+
+                <p class="project-overview">
+                  HR workflow application for employee records, performance
+                  reviews, history and management reporting.
+                </p>
+
+                <ul class="key-points">
+                  <li>Separate employee and administrator workflows.</li>
+                  <li>
+                    Team and individual performance views with threshold alerts.
+                  </li>
+                  <li>Backed by a relational SQL Server data model.</li>
+                </ul>
 
                 <div class="actions">
                   <a
@@ -548,71 +676,63 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Source Code</a
                   >
+                    Source
+                  </a>
                   <a
                     href="Dean H - Employee Performance Management System Design Document.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="button alt"
-                    >Design Doc</a
+                    class="text-link"
                   >
+                    Design document
+                  </a>
                 </div>
               </div>
             </article>
 
-            <!-- Library Booking System -->
-            <article class="card"> 
+            <article class="card project-card">
               <a
                 href="https://github.com/DeanProgramming/NetCoreLibrarySystem"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="card-media"
+                aria-label="View the Library Management System source code"
               >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/LibrarySystemPosterWEBP.webp" 
-                  autoplay
+                <video
+                  poster="posters/LibrarySystemPosterWEBP.webp"
                   loop
                   muted
                   playsinline
                   preload="none"
                   class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
                 >
                   <source data-src="images/LibrarySystemMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
+                <span class="media-cta">View source</span>
               </a>
 
               <div class="card-body">
-                <h3>Library Booking System</h3>
-                <p class="muted">.NET 7, .NET Core, Razor Pages</p>
+                <p class="project-badge neutral">Role-based application</p>
+                <h3>Library Management System</h3>
+                <ul class="technology-list" aria-label="Library system technologies">
+                  <li>.NET 7</li>
+                  <li>Razor Pages</li>
+                  <li>Identity</li>
+                  <li>EF Core</li>
+                  <li>SQL</li>
+                </ul>
 
-                <div class="project-overview">
-                  <p>
-                    Role-based booking platform with search/filtering, availability checks, user
-                    reservations, and admin inventory management.
-                  </p>
-                </div>
+                <p class="project-overview">
+                  Searchable booking system with user reservations, availability
+                  rules and administrator inventory workflows.
+                </p>
 
-                <div class="collapsible" id="library-details">
-                  <ul>
-                    <li>Search and filters across multiple media types</li>
-                    <li>Real-time availability + user bookings</li>
-                    <li>Admin: inventory CRUD + booking oversight + return confirmation</li>
-                    <li>Designed for future cloud deployment</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="library-details"
-                >
-                  Show more
-                </button>
+                <ul class="key-points">
+                  <li>Search and filters across books, DVDs and CDs.</li>
+                  <li>Authenticated user booking history and availability.</li>
+                  <li>Admin CRUD, returns and booking oversight.</li>
+                </ul>
 
                 <div class="actions">
                   <a
@@ -620,653 +740,131 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button alt"
-                    >Source Code</a
                   >
+                    Source
+                  </a>
                   <a
                     href="Library System Design Doc.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="button alt"
-                    >Design Doc</a
+                    class="text-link"
                   >
-                </div>
-              </div>
-            </article>
-
-            <!-- Weather App -->
-            <article class="card"> 
-              <a
-                href="https://weatherapp-deanholland.azurewebsites.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/WeatherAppPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/WeatherAppMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>Live Weather and Map App</h3>
-                <p class="muted">.NET 6, ASP.NET MVC, unit testing, Azure</p>
-
-                <div class="project-overview">
-                  <p>
-                    Weather + map app combining current conditions and multi-day forecasts with interactive mapping.
-                    Integrates external APIs and includes unit tests.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="weather-details">
-                  <p>
-                    Integrates OpenWeatherMap and OpenStreetMap to provide real-time weather plus forecast
-                    summaries and mapping in one interface.
-                  </p>
-                  <ul>
-                    <li>Current weather: temperature, humidity, conditions</li>
-                    <li>Forecast processing: averages/high/low per day</li>
-                    <li>Unit test project validating core logic</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="weather-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/WeatherApp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://weatherapp-deanholland.azurewebsites.net/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Go to Website</a
-                  >
-                  <a
-                    href="Live Weather and Map Application Design Doc.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Design Doc</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Blazor ToDo -->
-            <article class="card">
-              <a
-                href="https://deanprogramming.github.io/ToDoApplicationPublished/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/ToDoAppPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/ToDoAppMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>ToDo Task Application</h3>
-                <p class="muted">.NET 7, Blazor</p>
-
-                <div class="project-overview">
-                  <p>
-                    Component-driven task manager with create/edit/delete, prioritisation, and date-based grouping
-                    for quick daily planning.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="blazor-details">
-                  <ul>
-                    <li>CRUD tasks with title/description/priority/due date</li>
-                    <li>Date grouping for daily focus</li>
-                    <li>Interactive Blazor UI</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="blazor-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/ToDoListApplication"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://deanprogramming.github.io/ToDoApplicationPublished/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Go to Website</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Vue ToDo -->
-            <article class="card">
-              <a
-                href="https://deanprogramming.github.io/VUE-ToDoApplication/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/VUEToDoAppPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/VUEToDoAppMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>ToDo Task Application</h3>
-                <p class="muted">Vue.js</p>
-
-                <div class="project-overview">
-                  <p>
-                    Vue.js version focusing on reactive UI updates and state-driven rendering for a responsive UX.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="vue-details">
-                  <p>
-                    A rebuild of the ToDo app using Vue, emphasizing reactive state updates and clean client-side flows.
-                  </p>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="vue-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/VUE-ToDoApplication"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://deanprogramming.github.io/VUE-ToDoApplication/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Go to Website</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Earth and Moon -->
-            <article class="card">
-              <a
-                href="https://github.com/DeanProgramming/EarthAndMoon"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/EarthandMoonPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/EarthandMoonMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>Earth and Moon</h3>
-                <p class="muted">Three.js, HTML, CSS</p>
-
-                <div class="project-overview">
-                  <p>
-                    3D Earth–Moon visualisation with orbit simulation, raycasting hover interactions,
-                    and modular design to support adding more planets.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="earth-details">
-                  <ul>
-                    <li>Rotations + orbit simulation</li>
-                    <li>Raycasting hover UI info</li>
-                    <li>Selectable planet camera-lock logic</li>
-                    <li>Modular, extensible codebase</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="earth-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/EarthAndMoon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Generic Online Shop -->
-            <article class="card">
-              <a
-                href="https://github.com/DeanProgramming/GenericOnlineShop"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video 
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/GenericShopPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/GenericShopMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>Generic Online Shop</h3>
-                <p class="muted">HTML, CSS, JavaScript</p>
-
-                <div class="project-overview">
-                  <p>
-                    Responsive ecommerce-style site with product listing, cart management, and checkout flows.
-                    Built to showcase HTML/CSS fundamentals and interactive JS behaviour.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="shop-details">
-                  <ul>
-                    <li>Store catalogue browsing</li>
-                    <li>Add/remove cart items</li>
-                    <li>Responsive layout for multiple screen sizes</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="shop-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/GenericOnlineShop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://deanprogramming.github.io/GenericOnlineShop/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Load Website</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Face Recognition Game -->
-            <article class="card">
-              <a
-                href="https://github.com/DeanProgramming/MiniGames-Python-and-OpenCV"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video             
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/TrackingGamePosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/TrackingGameMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-
-              <div class="card-body">
-                <h3>Face Recognition Game — 93% Mark</h3>
-                <p class="muted">Python, OpenCV</p>
-
-                <div class="project-overview">
-                  <p>
-                    Mini-games using face and colour tracking as controls. Built with Python + OpenCV for an education-focused assignment.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="opencv-details">
-                  <ul>
-                    <li>Face tracking control inside an AR/VR-style interaction model</li>
-                    <li>Colour tracking markers for question challenges</li>
-                    <li>Assignment graded at 93%</li>
-                  </ul>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="opencv-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://github.com/DeanProgramming/MiniGames-Python-and-OpenCV"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Source Code</a
-                  >
-                  <a
-                    href="https://youtu.be/eGx_1i5maN4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Watch Demo</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Project Outbreak -->
-            <article class="card">
-              <a
-                href="https://indiesharkgamescompany.wordpress.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <img
-                  src="posters/StandinPosterWEBP.webp"
-                  data-src="images/ProjectOutbreakWEBP.webp"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Project Outbreak preview"
-                  class="lazy-img"
-                />
-              </a> 
-              <div class="card-body">
-                <h3>Project Outbreak — Co-Owner, AI Lead</h3>
-                <p class="muted">Unity, C#</p>
-
-                <div class="project-overview">
-                  <p>
-                    Vertical slice featuring modular enemy AI with squad-style coordination for a top-down roguelike prototype.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="outbreak-details">
-                  <p>
-                    Built modular AI behaviours that supported dynamic enemy selection during procedural generation,
-                    while keeping encounters readable and fair.
-                  </p>
-                  <p>Presented at Transfuzer 2020 and participated in events via Game Republic.</p>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="outbreak-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://indie-shark-games.itch.io/project-outbreak"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Play the Vertical Slice</a
-                  >
-                  <a
-                    href="https://indiesharkgamescompany.wordpress.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Go to Website</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- Bind and Banish -->
-            <article class="card">
-              <a
-                href="https://www.youtube.com/watch?v=unvfayUzqUc"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <img
-                  src="posters/StandinPosterWEBP.webp"
-                  data-src="images/BindNBanishWEBP.webp"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Bind and Banish logo"
-                  class="lazy-img"
-                />
-              </a>
-              <div class="card-body">
-                <h3>Bind and Banish</h3>
-                <p class="muted">Unity, C#</p>
-
-                <div class="project-overview">
-                  <p>
-                    Team-built first-person ghost capturing game featuring state-driven ghost behaviour and custom avoidance.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="bind-details">
-                  <p>
-                    I implemented AI behaviours and a custom avoidance system. The ghost behaviour used a finite state machine.
-                  </p>
-                  <ul>
-                    <li>Zigzag flight patterns for ambient movement</li>
-                    <li>Hiding in objects and manipulating lights</li>
-                    <li>Aggressive “revealed” state: throws objects, taunts player</li>
-                    <li>Group gathering and wandering using NavMesh + custom movement</li>
-                  </ul>
-                  <p>
-                    Awarded <strong>Best Team</strong> at The Game Republic Student Showcase 2021.
-                  </p>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="bind-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions">
-                  <a
-                    href="https://www.youtube.com/watch?v=unvfayUzqUc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Watch the Demo</a
-                  >
-                </div>
-              </div>
-            </article> 
-
-            <!-- DTH + Mad Escape -->
-            <article class="card">
-              <a
-                href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card-media"
-              >
-                <video            
-                  poster="posters/StandinPosterWEBP.webp"
-                  data-poster="posters/CombinedSearchForAStarPosterWEBP.webp"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  preload="none"
-                  class="lazy-video"
-                  style="width: 100%; object-fit: cover;"
-                >
-                  <source data-src="images/CombinedSearchForAStarMP4.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-              <div class="card-body">
-                <h3>DTH & The Mad Escape — Programming Competition Submissions (2020–2021)</h3>
-                <p class="muted">Unity, C#</p>
-
-                <div class="project-overview">
-                  <p>
-                    Competition entries developed by analysing and extending existing Unity codebases.
-                    Implemented new features, improved system structure, optimised performance,
-                    and refined functionality within strict time and technical constraints.
-                  </p>
-                </div>
-
-                <div class="collapsible" id="competition-details">
-                  <p>
-                    Achieved <strong>joint 4th place</strong> and received the <strong>“One to Look Out For”</strong>
-                    recognition in 2020, followed by a <strong>13th place finish out of 54 participants</strong>
-                    in 2021. Focused on understanding legacy code, designing scalable improvements,
-                    and delivering robust, high-quality software under competition conditions.
-                  </p>
-                </div>
-
-                <button
-                  class="toggle-button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="competition-details"
-                >
-                  Show more
-                </button>
-
-                <div class="actions"> 
-                  <a
-                    href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >DTH - Judges Feedback</a
-                  >
-                  <a
-                    href="https://itch.io/jam/sfasx-games-programming/rate/555855"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button alt"
-                    >Mad Escape Judges Feedback</a
-                  >
+                    Design document
+                  </a>
                 </div>
               </div>
             </article>
           </div>
+
+          <details class="project-archive">
+            <summary>Earlier smaller note worthy project and experiments</summary>
+            <div class="archive-grid">
+              <a
+                href="https://github.com/DeanProgramming/ToDoListApplication"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Blazor task app</strong>
+                <span>.NET · Blazor</span>
+              </a>
+              <a
+                href="https://github.com/DeanProgramming/VUE-ToDoApplication"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Vue task app</strong>
+                <span>Vue.js</span>
+              </a>
+              <a
+                href="https://github.com/DeanProgramming/EarthAndMoon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Earth &amp; Moon</strong>
+                <span>Three.js · JavaScript</span>
+              </a>
+              <a
+                href="https://github.com/DeanProgramming/GenericOnlineShop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Online shop</strong>
+                <span>HTML · CSS · JavaScript</span>
+              </a>
+              <a
+                href="https://github.com/DeanProgramming/MiniGames-Python-and-OpenCV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Face recognition game — 93%</strong>
+                <span>Python · OpenCV</span>
+              </a>
+              <a
+                href="https://indie-shark-games.itch.io/project-outbreak"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Project Outbreak</strong>
+                <span>Unity · C# · AI lead</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=unvfayUzqUc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Bind and Banish</strong>
+                <span>Unity · C# · Best Team award</span>
+              </a>
+              <a
+                href="https://itch.io/jam/sfas-games-programming-2021/rate/893679"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Search for a Star</strong>
+                <span>Unity · C# · Competition work</span>
+              </a>
+            </div>
+          </details>
         </div>
       </section>
 
-      <footer id="footer" class="site-footer">
-        <div class="container">
-          <h2>Get in touch</h2>
-          <p class="muted">
-            <a href="mailto:Holland.d@hotmail.co.uk">Holland.d@hotmail.co.uk</a>
-          </p>
+      <footer id="contact" class="site-footer">
+        <div class="container contact-panel">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Want the complete picture?</h2>
+            <p>
+              My CV covers the full employment history. GitHub contains the code
+              and documentation behind the projects shown here.
+            </p>
+          </div>
+          <div class="actions contact-actions">
+            <a class="button" href="mailto:Holland.d@hotmail.co.uk">Email me</a>
+            <a
+              class="button alt"
+              href="Dean_Holland_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open CV
+            </a>
+            <a
+              class="text-link light"
+              href="https://www.linkedin.com/in/dean-holland/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              class="text-link light"
+              href="https://github.com/DeanProgramming"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </footer>
     </main>
@@ -1277,35 +875,73 @@
           © <span id="year"></span> Dean Holland
         </span>
 
-          <nav class="footer-icons" aria-label="Social links">
-            <a class="icon-link" href="mailto:Holland.d@hotmail.co.uk" aria-label="Email"> 
-              <img src="assets/svgs/envelope-solid-full.svg" class="fa-svg" aria-hidden="true">
-            </a>
-
-            <a class="icon-link" href="https://github.com/DeanProgramming" target="_blank" rel="noopener noreferrer" aria-label="GitHub"> 
-              <img src="assets/svgs/github-brands-solid-full.svg" class="fa-svg" aria-hidden="true">
-            </a>
-
-            <a class="icon-link" href="https://www.linkedin.com/in/dean-holland/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src="assets/svgs/linkedin-brands-solid-full.svg" class="fa-svg" aria-hidden="true">
-            </a>
-
-            <a class="icon-link" href="Dean_Holland_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
-              <img src="assets/svgs/file-solid-full.svg" class="fa-svg" aria-hidden="true">
-            </a>
-
-            <a class="icon-link" href="#header" aria-label="Back to top">
-              <img src="assets/svgs/up-long-solid-full.svg" class="fa-svg" aria-hidden="true">
-            </a> 
+        <nav class="footer-icons" aria-label="Social links">
+          <a
+            class="icon-link"
+            href="mailto:Holland.d@hotmail.co.uk"
+            aria-label="Email Dean Holland"
+          >
+            <img
+              src="assets/svgs/envelope-solid-full.svg"
+              class="fa-svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+          <a
+            class="icon-link"
+            href="https://github.com/DeanProgramming"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dean Holland on GitHub"
+          >
+            <img
+              src="assets/svgs/github-brands-solid-full.svg"
+              class="fa-svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/dean-holland/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dean Holland on LinkedIn"
+          >
+            <img
+              src="assets/svgs/linkedin-brands-solid-full.svg"
+              class="fa-svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+          <a
+            class="icon-link"
+            href="Dean_Holland_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Dean Holland's CV"
+          >
+            <img
+              src="assets/svgs/file-solid-full.svg"
+              class="fa-svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+          <a class="icon-link" href="#about" aria-label="Back to top">
+            <img
+              src="assets/svgs/up-long-solid-full.svg"
+              class="fa-svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
         </nav>
-
       </div>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
- 
-    <script src="assets/js/main.js" defer></script> 
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>

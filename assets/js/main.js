@@ -5,332 +5,379 @@
     toggles: ".toggle-button",
     compactNav: "#compact-nav",
     progress: "#scroll-progress",
-    spyLinks: '#compact-nav [data-spy], #header [data-spy]',
-    sections: ["#main", "#personal-projects", "#footer"],
+    spyLinks: "#compact-nav [data-spy], .site-nav [data-spy]",
+    videos: "video.lazy-video",
   };
 
-  const ENTER_Y = 220; // show compact nav after this
-  const EXIT_Y = 120; // hide only when back above this
+  const SECTION_IDS = ["flagship", "experience", "projects", "contact"];
+  const ENTER_Y = 260;
+  const EXIT_Y = 150;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  const saveData = Boolean(navigator.connection?.saveData);
 
-  const PROGRESS_THROTTLE = true;
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) =>
+    Array.from(root.querySelectorAll(selector));
 
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
-  function setExpanded(button, expanded) {
-    button.setAttribute("aria-expanded", String(expanded));
-    button.textContent = expanded ? "Show less" : "Show more";
-  }
-
-  // read --scroll-offset from CSS (fallback to 90)
   function getScrollOffset() {
-    const v = getComputedStyle(document.documentElement)
+    const rawValue = getComputedStyle(document.documentElement)
       .getPropertyValue("--scroll-offset")
       .trim();
-    const n = parseInt(v, 10);
-    return Number.isFinite(n) ? n : 90;
-  }
-  
+    const parsedValue = Number.parseInt(rawValue, 10);
 
-  /* -------------------- Collapsibles -------------------- */
+    return Number.isFinite(parsedValue) ? parsedValue : 84;
+  }
+
+  function requestLayoutRefresh() {
+    window.dispatchEvent(new Event("portfolio:layoutchange"));
+  }
+
+  function setExpanded(button, expanded) {
+    const collapsedLabel =
+      button.dataset.collapsedLabel || button.textContent.trim() || "Show more";
+    const expandedLabel = button.dataset.expandedLabel || "Show less";
+
+    button.setAttribute("aria-expanded", String(expanded));
+    button.textContent = expanded ? expandedLabel : collapsedLabel;
+  }
+
+  /* -------------------- Expandable engineering details -------------------- */
   function initCollapsibles() {
     const buttons = $$(SELECTORS.toggles);
 
-    buttons.forEach((btn) => {
-      const targetId = btn.getAttribute("aria-controls");
+    buttons.forEach((button) => {
+      const targetId = button.getAttribute("aria-controls");
       const panel = targetId ? document.getElementById(targetId) : null;
-      const card = btn.closest(".card");
 
-      if (!panel) return;
+      if (!panel) {
+        button.hidden = true;
+        return;
+      }
 
-      // Initial state
       panel.style.height = "0px";
       panel.classList.remove("is-open");
-      setExpanded(btn, false);
+      setExpanded(button, false);
 
-      btn.addEventListener("click", () => {
+      button.addEventListener("click", () => {
         const isOpen = panel.classList.contains("is-open");
 
         if (isOpen) {
-          panel.style.height = panel.scrollHeight + "px";
-          requestAnimationFrame(() => {
-            panel.style.height = "0px";
-            panel.classList.remove("is-open");
-            setExpanded(btn, false);
-          });
+          panel.style.height = `${panel.scrollHeight}px`;
 
           requestAnimationFrame(() => {
-            if (!card) return;
-            const y = card.getBoundingClientRect().top + window.scrollY - 120;
-            window.scrollTo({ top: y, behavior: "smooth" });
+            panel.classList.remove("is-open");
+            panel.style.height = "0px";
+            setExpanded(button, false);
           });
         } else {
-          // Open
           panel.classList.add("is-open");
-          panel.style.height = panel.scrollHeight + "px";
-          setExpanded(btn, true);
+          panel.style.height = `${panel.scrollHeight}px`;
+          setExpanded(button, true);
 
-          const onEnd = (e) => {
-            if (e.propertyName !== "height") return;
+          const onTransitionEnd = (event) => {
+            if (event.propertyName !== "height") {
+              return;
+            }
+
             panel.style.height = "auto";
-            panel.removeEventListener("transitionend", onEnd);
+            panel.removeEventListener("transitionend", onTransitionEnd);
           };
-          panel.addEventListener("transitionend", onEnd);
+
+          panel.addEventListener("transitionend", onTransitionEnd);
         }
+
+        window.setTimeout(requestLayoutRefresh, 360);
       });
     });
 
+    let resizeFrame = 0;
     window.addEventListener("resize", () => {
-      buttons.forEach((btn) => {
-        const id = btn.getAttribute("aria-controls");
-        const panel = id ? document.getElementById(id) : null;
-        if (!panel) return;
+      window.cancelAnimationFrame(resizeFrame);
+      resizeFrame = window.requestAnimationFrame(() => {
+        buttons.forEach((button) => {
+          const targetId = button.getAttribute("aria-controls");
+          const panel = targetId ? document.getElementById(targetId) : null;
 
-        if (panel.classList.contains("is-open")) {
-          panel.style.height = panel.scrollHeight + "px";
-          requestAnimationFrame(() => (panel.style.height = "auto"));
-        }
+          if (panel?.classList.contains("is-open")) {
+            panel.style.height = "auto";
+          }
+        });
+
+        requestLayoutRefresh();
       });
     });
   }
 
-function initLazyImages({
-  rootMargin = "800px 0px",
-  threshold = 0.01,
-} = {}) {
-  const imgs = document.querySelectorAll("img.lazy-img[data-src]");
-  if (!imgs.length) return;
+  /* -------------------- Lazy, viewport-aware videos -------------------- */
+  function initLazyVideos() {
+    const videos = $$(SELECTORS.videos);
 
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-
-      const img = entry.target;
-      const realSrc = img.dataset.src;
-
-      if (realSrc && img.src !== realSrc) {
-        img.src = realSrc;
-      }
-
-      io.unobserve(img);
+    if (!videos.length) {
+      return;
     }
-  }, { rootMargin, threshold });
 
-  imgs.forEach(img => io.observe(img));
-}
+    const mayAutoplay = !prefersReducedMotion.matches && !saveData;
 
+    const loadVideo = (video) => {
+      const source = $("source[data-src]", video);
 
-function initLazyVideos({
-  posterRootMargin = "800px 0px",
-  videoRootMargin = "200px 0px",
-  threshold = 0.25,
-  readyEvent = "loadeddata",
-} = {}) {
-  const videos = document.querySelectorAll("video.lazy-video");
-  if (!videos.length) return;
-
-  const posterObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-
-      const video = entry.target;
-
-      if (video.dataset.poster && video.poster !== video.dataset.poster) {
-        video.poster = video.dataset.poster;
+      if (!source || source.src) {
+        return;
       }
 
-      posterObserver.unobserve(video);
-    }
-  }, { rootMargin: posterRootMargin, threshold: 0.01 });
+      source.src = source.dataset.src;
+      video.load();
+    };
 
-  const videoObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-
-      const video = entry.target;
-
-      video.muted = true;
-      video.playsInline = true;
-
-      if (video.dataset.poster && video.poster !== video.dataset.poster) {
-        video.poster = video.dataset.poster;
+    const playVideo = (video) => {
+      if (!mayAutoplay) {
+        return;
       }
 
-      const source = video.querySelector("source[data-src]");
-      if (source && !source.src) {
-        source.src = source.dataset.src;
-        video.load();
-      }
-
-      const playWhenReady = () => {
-        video.play().catch(() => {});
+      const attemptPlayback = () => {
+        video.play().catch(() => {
+          // The poster remains a complete fallback when autoplay is blocked.
+        });
       };
 
-      if (video.readyState >= 2) {
-        playWhenReady();
+      if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        attemptPlayback();
       } else {
-        video.addEventListener(readyEvent, playWhenReady, { once: true });
+        video.addEventListener("loadeddata", attemptPlayback, { once: true });
+      }
+    };
+
+    videos.forEach((video) => {
+      video.muted = true;
+      video.playsInline = true;
+      video.preload = "none";
+    });
+
+    if (!mayAutoplay) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      videos.forEach((video) => {
+        loadVideo(video);
+        playVideo(video);
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+
+          if (entry.isIntersecting) {
+            loadVideo(video);
+            playVideo(video);
+          } else if (!video.paused) {
+            video.pause();
+          }
+        });
+      },
+      {
+        rootMargin: "220px 0px",
+        threshold: 0.12,
+      }
+    );
+
+    videos.forEach((video) => observer.observe(video));
+
+    prefersReducedMotion.addEventListener?.("change", (event) => {
+      if (!event.matches) {
+        return;
       }
 
-      videoObserver.unobserve(video);
-    }
-  }, { rootMargin: videoRootMargin, threshold });
-
-  for (const v of videos) {
-    v.preload = "none";
-    posterObserver.observe(v);
-    videoObserver.observe(v);
-  }
-}
-  
-  /* -------------------- Progress bar -------------------- */
-  function updateProgressBar() {
-    const bar = $(SELECTORS.progress);
-    if (!bar) return;
-
-    const doc = document.documentElement;
-    const scrollTop = doc.scrollTop || document.body.scrollTop;
-    const scrollHeight = doc.scrollHeight - doc.clientHeight;
-    const percent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-
-    bar.style.width = percent.toFixed(2) + "%";
+      videos.forEach((video) => video.pause());
+    });
   }
 
-  /* -------------------- Compact nav visibility -------------------- */
-  function updateCompactNavVisibility() {
+  /* -------------------- Progress bar and compact navigation -------------------- */
+  function initScrollChrome() {
+    const progressBar = $(SELECTORS.progress);
     const compactNav = $(SELECTORS.compactNav);
-    if (!compactNav) return;
+    let framePending = false;
 
-    const y = window.scrollY;
-    const shown = document.body.classList.contains("show-compact-nav");
+    const update = () => {
+      const documentElement = document.documentElement;
+      const scrollTop = documentElement.scrollTop || document.body.scrollTop;
+      const scrollRange =
+        documentElement.scrollHeight - documentElement.clientHeight;
+      const progress =
+        scrollRange > 0 ? Math.min(100, (scrollTop / scrollRange) * 100) : 0;
 
-    if (!shown && y > ENTER_Y) {
-      document.body.classList.add("show-compact-nav");
-    } else if (shown && y < EXIT_Y) {
-      document.body.classList.remove("show-compact-nav");
-    }
+      if (progressBar) {
+        progressBar.style.width = `${progress.toFixed(2)}%`;
+      }
+
+      if (compactNav) {
+        const isShown = document.body.classList.contains("show-compact-nav");
+
+        if (!isShown && window.scrollY > ENTER_Y) {
+          document.body.classList.add("show-compact-nav");
+        } else if (isShown && window.scrollY < EXIT_Y) {
+          document.body.classList.remove("show-compact-nav");
+        }
+      }
+
+      framePending = false;
+    };
+
+    const requestUpdate = () => {
+      if (framePending) {
+        return;
+      }
+
+      framePending = true;
+      window.requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("load", requestUpdate);
+    requestUpdate();
   }
 
-  /* -------------------- Section spy (activates nav tabs) -------------------- */
+  /* -------------------- Active section navigation -------------------- */
   function initSectionSpy() {
     const links = $$(SELECTORS.spyLinks);
-    if (!links.length) return;
+    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
+      Boolean
+    );
 
-    const sectionEls = SELECTORS.sections.map((sel) => $(sel)).filter(Boolean);
-    if (!sectionEls.length) return;
-
-    const setActive = (id) => {
-      // toggle .active on links (header + compact nav)
-      links.forEach((a) => {
-        a.classList.toggle("active", a.getAttribute("data-spy") === id);
-      });
-
-      // move <li class="current"> in the header nav (if you want it)
-      const headerLis = $$("#header .site-nav li");
-      headerLis.forEach((li) => {
-        const a = li.querySelector("[data-spy]");
-        li.classList.toggle("current", a?.getAttribute("data-spy") === id);
-      });
-    };
+    if (!links.length || !sections.length) {
+      return;
+    }
 
     let positions = [];
+    let framePending = false;
 
-    const recalcPositions = () => {
-      positions = sectionEls
-        .map((el) => ({
-          id: el.id,
-          top: el.getBoundingClientRect().top + window.scrollY,
-        }))
-        .sort((a, b) => a.top - b.top);
+    const setActive = (activeId) => {
+      links.forEach((link) => {
+        const isActive = link.dataset.spy === activeId;
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      $$(".site-nav li").forEach((listItem) => {
+        const link = $("[data-spy]", listItem);
+        listItem.classList.toggle("current", link?.dataset.spy === activeId);
+      });
     };
 
-    const updateSpy = () => {
-      const spyLine = window.scrollY + getScrollOffset() + 5;
+    const recalculate = () => {
+      positions = sections
+        .map((section) => ({
+          id: section.id,
+          top: section.getBoundingClientRect().top + window.scrollY,
+        }))
+        .sort((first, second) => first.top - second.top);
+    };
 
-      // last section whose top is above the spy line
-      let activeId = positions[0]?.id || "main";
-      for (const s of positions) {
-        if (s.top <= spyLine) activeId = s.id;
-        else break;
-      }
+    const update = () => {
+      const marker = window.scrollY + getScrollOffset() + 8;
+      let activeId = positions[0]?.id;
+
+      positions.forEach((section) => {
+        if (section.top <= marker) {
+          activeId = section.id;
+        }
+      });
 
       setActive(activeId);
+      framePending = false;
     };
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        updateSpy();
-        ticking = false;
-      });
+    const requestUpdate = () => {
+      if (framePending) {
+        return;
+      }
+
+      framePending = true;
+      window.requestAnimationFrame(update);
     };
 
-    // init
-    recalcPositions();
-    updateSpy();
+    const refresh = () => {
+      recalculate();
+      requestUpdate();
+    };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", () => {
-      recalcPositions();
-      updateSpy();
-    });
-    window.addEventListener("load", () => {
-      recalcPositions();
-      updateSpy();
-    });
+    refresh();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", refresh);
+    window.addEventListener("load", refresh);
+    window.addEventListener("portfolio:layoutchange", refresh);
+
+    document.addEventListener(
+      "toggle",
+      (event) => {
+        if (event.target.matches?.("details")) {
+          window.setTimeout(refresh, 0);
+        }
+      },
+      true
+    );
   }
 
-  /* -------------------- Smooth internal anchors -------------------- */
+  /* -------------------- Internal navigation -------------------- */
   function initSmoothAnchors() {
-    document.addEventListener("click", (e) => {
-      const a = e.target.closest('a[href^="#"]');
-      if (!a) return;
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest('a[href^="#"]');
 
-      const href = a.getAttribute("href");
-      if (!href || href === "#") return;
+      if (!link) {
+        return;
+      }
 
-      const el = document.querySelector(href);
-      if (!el) return;
+      const href = link.getAttribute("href");
 
-      e.preventDefault();
+      if (!href || href === "#") {
+        return;
+      }
 
-      // Respect fixed header offset
-      const y = el.getBoundingClientRect().top + window.scrollY - getScrollOffset();
-      window.scrollTo({ top: y, behavior: "smooth" });
+      const target = document.getElementById(href.slice(1));
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const targetTop =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        getScrollOffset();
+
+      window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+      });
     });
   }
 
-  /* -------------------- Scroll loop (throttled) -------------------- */
-  function initScrollLoop() {
-    let ticking = false;
+  function setCurrentYear() {
+    const year = $("#year");
 
-    const onScroll = () => {
-      if (PROGRESS_THROTTLE && ticking) return;
-      ticking = true;
-
-      requestAnimationFrame(() => {
-        updateProgressBar();
-        updateCompactNavVisibility();
-        ticking = false;
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    window.addEventListener("load", onScroll);
-
-    // Initial run
-    onScroll();
+    if (year) {
+      year.textContent = String(new Date().getFullYear());
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    setCurrentYear();
     initCollapsibles();
+    initLazyVideos();
+    initScrollChrome();
     initSectionSpy();
     initSmoothAnchors();
-    initScrollLoop();
-    initLazyImages();
-    initLazyVideos({ readyEvent: "canplay" });
   });
 })();
