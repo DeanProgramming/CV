@@ -336,7 +336,7 @@ body.show-compact-nav #compact-nav {
 ----------------------------- */
 .section {
   position: relative;
-  padding: clamp(3.5rem, 7vw, 5.75rem) 0;
+  padding: clamp(0.5rem, 7vw, 2.75rem) 0;
   background: var(--surface-alt);
 }
 
@@ -1042,8 +1042,8 @@ button.toggle-button {
 
   #compact-nav .compact-inner {
     justify-content: center; 
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   #compact-nav .compact-links {
@@ -1053,7 +1053,7 @@ button.toggle-button {
   }
 
   #compact-nav .compact-links a {
-    font-size: 0.88rem;
+    font-size: 1.1rem;
   }
 
   .section {
